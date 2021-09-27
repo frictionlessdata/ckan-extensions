@@ -1,0 +1,520 @@
+code,user,repo,branch,stars,description
+ckan-ckanext-dcat,ckan,ckanext-dcat,master,119,CKAN ♥ DCAT
+ckan-ckanext-harvest,ckan,ckanext-harvest,master,103,Remote harvesting extension for CKAN
+ckan-ckanext-spatial,ckan,ckanext-spatial,master,99,Geospatial extension for CKAN
+ckan-ckanext-scheming,ckan,ckanext-scheming,master,62,"Easy, shareable custom CKAN schemas"
+open-data-ckanext-canada,open-data,ckanext-canada,master,40,Government of Canada CKAN Extension - Extension à CKAN du Gouvernement du Canada
+ckan-ckanext-pages,ckan,ckanext-pages,master,39,A simple builtin CMS for CKAN sites
+frictionlessdata-ckanext-datapackager,frictionlessdata,ckanext-datapackager,main,31,CKAN extension for importing/exporting Data Packages.
+ckan-ckanext-googleanalytics,ckan,ckanext-googleanalytics,master,30,"CKAN extension to integrate Google Analytics data into CKAN. Gives download stats on package pages, list of most popular packages, etc."
+datagovuk-ckanext-dgu,datagovuk,ckanext-dgu,master,30,CKAN extension for data.gov.uk
+NaturalHistoryMuseum-ckanext-ldap,NaturalHistoryMuseum,ckanext-ldap,main,30,A CKAN extension that provides LDAP authentication.
+TkTech-ckanext-cloudstorage,TkTech,ckanext-cloudstorage,master,29,"Implements support for resource storage against multiple popular providers via apache-libcloud (S3, Azure Storage, etc...)"
+ckan-ckanext-showcase,ckan,ckanext-showcase,master,28,A ckan extension to showcase datasets in use
+GSA-ckanext-geodatagov,GSA,ckanext-geodatagov,main,27,data.gov extension
+ckan-ckanext-xloader,ckan,ckanext-xloader,master,27,Express Loader - quickly load data into DataStore. A replacement for DataPusher.
+ckan-ckanext-dashboard,ckan,ckanext-dashboard,master,26,Organize views in a single dashboard
+alexandrainst-ckanext-realtime,alexandrainst,ckanext-realtime,master,26,Build realtime apps with CKAN
+ckan-ckanext-mapviews,ckan,ckanext-mapviews,master,25,CKAN Resource View to build maps and choropleth maps
+ckan-ckanext-qa,ckan,ckanext-qa,master,21,CKAN QA Extension
+conwetlab-ckanext-oauth2,conwetlab,ckanext-oauth2,master,21,OAuth2 support for CKAN
+ckan-ckanext-pdfview,ckan,ckanext-pdfview,master,20,PDF viewer for CKAN
+bcgov-ckanext-bcgov,bcgov,ckanext-bcgov,dev,20,"BC Data Catalogue source code, main ckan extension "
+ckan-ckanext-datastorer,ckan,ckanext-datastorer,master,20,Get files from ckan into the webstore.
+ckan-ckanext-hierarchy,ckan,ckanext-hierarchy,master,19,Organization hierarchy - CKAN extension
+ckan-ckanext-archiver,ckan,ckanext-archiver,master,19,Archive CKAN resources
+frictionlessdata-ckanext-validation,frictionlessdata,ckanext-validation,master,19,CKAN extension for validating Data Packages using Table Schema.
+stadt-karlsruhe-ckanext-extractor,stadt-karlsruhe,ckanext-extractor,master,19,A full text and metadata extractor for CKAN
+ckan-ckanext-fluent,ckan,ckanext-fluent,master,18,Multilingual fields for CKAN
+NaturalHistoryMuseum-ckanext-nhm,NaturalHistoryMuseum,ckanext-nhm,main,18,A CKAN extension for the Natural History Museum's Data Portal.
+HHS-ckanext-datajson,HHS,ckanext-datajson,master,17,Custom CKAN extension for Healthdata.gov
+pduchesne-ckanext-geoview,pduchesne,ckanext-geoview,master,16,CKAN Geospatial ResourceView
+conwetlab-ckanext-datarequests,conwetlab,ckanext-datarequests,master,16,A plugin that allows users to request data that is not published yet
+GSA-ckanext-datagovtheme,GSA,ckanext-datagovtheme,main,16,Theme for Data Catalog 
+conwetlab-ckanext-privatedatasets,conwetlab,ckanext-privatedatasets,master,16,CKAN extension that allows a user to create private datasets only visible to certain users. The extension provides also an API to specify which users can access private datasets
+okfn-ckanext-s3filestore,okfn,ckanext-s3filestore,master,15,Use Amazon S3 as a filestore for CKAN
+NaturalHistoryMuseum-ckanext-doi,NaturalHistoryMuseum,ckanext-doi,main,15,"A CKAN extension for assigning a digital object identifier (DOI) to datasets, using the DataCite DOI service."
+dadosgovbr-ckanext-dadosgovbr,dadosgovbr,ckanext-dadosgovbr,master,15,Plugin / Tema do Portal Brasileiro de Dados Abertos do Governo Federal
+okfn-ckanext-wordpresser,okfn,ckanext-wordpresser,master,15,Wordpress integration for CKAN
+ckan-ckanext-report,ckan,ckanext-report,master,14,CKAN report infrastructure
+data-govt-nz-ckanext-security,data-govt-nz,ckanext-security,master,14,A CKAN extension to hold various security improvements for CKAN
+ckan-ckanext-issues,ckan,ckanext-issues,master,14,CKAN Issues Extension
+jqnatividad-ckanext-officedocs,jqnatividad,ckanext-officedocs,master,14,MS Office and OpenOffice Resource viewer
+datacats-ckanext-geopusher,datacats,ckanext-geopusher,master,14,Autoconvert Shapefiles to GeoJSON and send them back to CKAN
+datacats-ckanext-webhooks,datacats,ckanext-webhooks,master,13,Webhooks for your CKAN
+ckan-ckanext-basiccharts,ckan,ckanext-basiccharts,master,12,"Line, bar and pie charts for CKAN"
+OpenGov-OpenData-ckanext-discourse,OpenGov-OpenData,ckanext-discourse,master,12,CKAN + Discourse
+PublicaMundi-ckanext-publicamundi,PublicaMundi,ckanext-publicamundi,master,12,PublicaMundi main CKAN extension
+azavea-ckanext-odp_theme,azavea,ckanext-odp_theme,develop,12,OpenDataPhilly CKAN customizations 
+keitaroinc-ckanext-visualize,keitaroinc,ckanext-visualize,master,12,CKAN extension to visualize data in DataStore
+ckan-ckanext-disqus,ckan,ckanext-disqus,master,11,Extension that adds the Disqus commenting system to CKAN
+datopian-ckanext-querytool,datopian,ckanext-querytool,master,11,:mag: :bar_chart: :earth_asia: CKAN extension that will provide data querying and story sharing with pre configured set of rules :newspaper: :clipboard:
+datadotworld-ckanext-datadotworld,datadotworld,ckanext-datadotworld,master,11,CKAN extension for data.world
+okfn-ckanext-example,okfn,ckanext-example,master,11,CKAN Extension that demonstrates some common patterns for customising a CKAN instance.
+SENATICS-ckanext-opendatagovpy,SENATICS,ckanext-opendatagovpy,master,11,Datos Abiertos de Gobierno del Paraguay
+okfn-ckanext-datahub,okfn,ckanext-datahub,master,11,Plugin for datahub
+liip-ckanext-ddi,liip,ckanext-ddi,master,10,"CKAN extension for DDI, developed for the World Bank"
+cphsolutionslab-ckanext-dataproxy,cphsolutionslab,ckanext-dataproxy,master,10,Use foreign data wrappers as source for the datastore in CKAN
+datacats-ckanext-featuredviews,datacats,ckanext-featuredviews,master,10,Display CKAN resource views on dataset and home pages
+okfn-ckanext-unhcr,okfn,ckanext-unhcr,master,10,CKAN extension for the UNHCR RIDL project
+kata-csc-ckanext-oaipmh,kata-csc,ckanext-oaipmh,master,10,OAI PMH extension to CKAN
+IATI-ckanext-iati,IATI,ckanext-iati,master,10,CKAN extension for the IATI Registry
+keitaroinc-ckanext-saml2auth,keitaroinc,ckanext-saml2auth,main,10,CKAN extension to enable Single Sign-On (SSO) for CKAN data portals via SAML2 Authentication.
+datopian-ckanext-developerpage,datopian,ckanext-developerpage,master,10,CKAN extension to display useful and important system information for portal maintenance and development
+alantygel-ckanext-tagmanager,alantygel,ckanext-tagmanager,master,10,Tag management for CKAN
+datagovuk-ckanext-ga-report,datagovuk,ckanext-ga-report,master,9,"For creating detailed reports of CKAN analytics, sliced by group"
+open-data-ckanext-wet-boew,open-data,ckanext-wet-boew,master,9,CKAN extension for the Web Experience Toolkit
+ckan-ckanext-apihelper,ckan,ckanext-apihelper,master,9,API Helper extension.
+DanePubliczneGovPl-ckanext-danepubliczne,DanePubliczneGovPl,ckanext-danepubliczne,develop,9,Layout and custom fields for DanePubliczne.gov.pl
+geosolutions-it-ckanext-geonetwork,geosolutions-it,ckanext-geonetwork,master,9,GeoNetwork harvester for CKAN
+opendata-swiss-ckanext-switzerland,opendata-swiss,ckanext-switzerland,master,9,DCAT-AP Switzerland & Templates
+okfn-ckanext-pdeu,okfn,ckanext-pdeu,master,9,Custom CKAN Extension for PublicData.eu
+datopian-ckanext-blob-storage,datopian,ckanext-blob-storage,master,9,"CKAN extension to offload blob storage to cloud storage providers (S3, GCS, Azure etc)."
+okfn-ckanext-envvars,okfn,ckanext-envvars,master,9,CKAN configuration settings available from env vars
+EnviDat-ckanext-restricted,EnviDat,ckanext-restricted,master,8,CKAN extension for restricting access to resources
+geosolutions-it-ckanext-dcatapit,geosolutions-it,ckanext-dcatapit,master,8,CKAN extension for the Italian Open Data Portals (DCAT_AP-IT)
+AppGeo-ckanext-agsview,AppGeo,ckanext-agsview,master,8,
+transparenzportalhamburg-ckanext-fulltext,transparenzportalhamburg,ckanext-fulltext,master,8,
+kata-csc-ckanext-kata,kata-csc,ckanext-kata,master,8,Kata extension for CKAN
+datagovuk-ckanext-os,datagovuk,ckanext-os,master,8,Spatial widgets developed in mainly by Ordnance Survey (CKAN extension)
+stadt-karlsruhe-ckanext-discovery,stadt-karlsruhe,ckanext-discovery,master,8,A CKAN extension to help people discover your data
+AjuntamentdeBarcelona-ckanext-odatabcn,AjuntamentdeBarcelona,ckanext-odatabcn,master,8,
+whythawk-ckanext-odata,whythawk,ckanext-odata,master,7,
+CodeForAfrica-ckanext-openafrica,CodeForAfrica,ckanext-openafrica,master,7,A CKAN extension to style and add features to the openAFRICA platform. Accessible at http://openafrica.net
+datagovuk-ckanext-datapreview,datagovuk,ckanext-datapreview,master,7,Data preview for ckan from local resource cache
+NaturalHistoryMuseum-ckanext-dataspatial,NaturalHistoryMuseum,ckanext-dataspatial,master,7,Ckan extension to enable geospatial searches within the datastore
+aptivate-ckanext-datasetthumbnail,aptivate,ckanext-datasetthumbnail,master,7,A CKAN plugin that generates thumbnails for datasets
+datopian-ckanext-versioning,datopian,ckanext-versioning,master,7,Deprecated. See https://github.com/datopian/ckanext-versions. ⏰ CKAN extension providing data versioning (metadata and files) based on git and github.
+datopian-ckanext-sweden,datopian,ckanext-sweden,master,7,"CKAN extension for Öppnadata.se, the Swedish data management platform"
+OpenGov-OpenData-ckanext-cartodbmap,OpenGov-OpenData,ckanext-cartodbmap,master,7,CKAN CartoDB ResourceView
+tdt-ckanext-tdt,tdt,ckanext-tdt,master,7,A The DataTank extension for CKAN
+REEEP-ckanext-climate-tagger,REEEP,ckanext-climate-tagger,master,7,Climate Tagger CKAN Extension - provides suggested tags for climate compatible content for CKAN
+datopian-ckanext-datagm,datopian,ckanext-datagm,master,7,Code and theme for the Data GM Open Data Portal at http://datagm.org.uk/
+datopian-ckanext-authz-service,datopian,ckanext-authz-service,master,7,Use CKAN to provide authorization tokens for other related systems
+ckan-ckanext-intro,ckan,ckanext-intro,master,6,A quick interactive introduction to writing CKAN extensions
+datawagovau-ckanext-datawagovautheme,datawagovau,ckanext-datawagovautheme,master,6,CKAN customisations and theme for data.wa.gov.au
+milicp-ckanext-lire,milicp,ckanext-lire,master,6,CKAN extension for managing datasets relationships
+ckan-ckanext-s3archive,ckan,ckanext-s3archive,master,6,Archive CKAN datastore to S3
+OpenGov-OpenData-ckanext-cob_theme,OpenGov-OpenData,ckanext-cob_theme,master,6,City of Boston CKAN theme based on brand guidelines designed by IDEO
+ckan-ckanext-drupal7,ckan,ckanext-drupal7,master,6,Drupal7 authentication for ckan
+DataShades-ckanext-cloudconnector,DataShades,ckanext-cloudconnector,master,6,An extension for the CKAN open data platform for storing resources on cloud storage
+ckan-ckanext-deadoralive,ckan,ckanext-deadoralive,master,6,A CKAN extension for the Dead or Alive link checker service
+datopian-ckanext-tayside,datopian,ckanext-tayside,master,6,Main extension for Tayside
+datopian-ckanext-versions,datopian,ckanext-versions,main,6,A CKAN extension for data versioning. Specifically dataset and resource versions.
+datopian-ckanext-orgdashboards,datopian,ckanext-orgdashboards,master,6,:clipboard: CKAN extension for creating organization dashboards :clipboard:
+aptivate-ckanext-datasetversions,aptivate,ckanext-datasetversions,master,6,CKAN extension to support multiple versions of a dataset
+bcgov-ckanext-openapiviewer,bcgov,ckanext-openapiviewer,master,6,BC Data Catalogue extension for OpenAPI (AKA Swagger) console
+okfn-ckanext-inspire,okfn,ckanext-inspire,master,6,
+okfn-ckanext-lacounts,okfn,ckanext-lacounts,master,6,CKAN extension for the LA Counts project
+datopian-ckanext-noanonaccess,datopian,ckanext-noanonaccess,master,6,Disable anonymous access to CKAN by redirecting users to login page.
+okfn-ckanext-rdf,okfn,ckanext-rdf,master,6,[DEPRECATED] - Please use https://github.com/ckan/ckanext-dcat
+keitaroinc-ckanext-knowledgehub,keitaroinc,ckanext-knowledgehub,master,6,
+NaturalHistoryMuseum-ckanext-datasolr,NaturalHistoryMuseum,ckanext-datasolr,master,6,datasolr is a Ckan extension to use Solr for datastore queries
+okfn-ckanext-vegaview,okfn,ckanext-vegaview,master,6,VegaJS' view extension for CKAN
+NuCivic-ckanext-cmap,NuCivic,ckanext-cmap,master,6,
+open-data-ckanext-repeating,open-data,ckanext-repeating,master,5,Repeating fields for CKAN: obsoleted by ckanext-scheming 2.1 multiple_text fields
+cmuphillycapstone-ckanext-dictionary,cmuphillycapstone,ckanext-dictionary,master,5,
+EnviDat-ckanext-composite,EnviDat,ckanext-composite,master,5,Extension for structured metadata fields based on ckanext-scheming and ckanext-repeating
+ngds-ckanext-ngds-bku03232018,ngds,ckanext-ngds-bku03232018,master,5,CKAN extension for NGDS-specific customizations
+datopian-ckanext-requestdata,datopian,ckanext-requestdata,master,5,:email: :mailbox_with_mail: CKAN extension for requesting new data :email: :mailbox_with_mail:
+ckan-ckanext-viewhelpers,ckan,ckanext-viewhelpers,master,5,Helpers for creating views for CKAN
+okfn-ckanext-mx,okfn,ckanext-mx,master,5,Theme for datos.gob.mx
+datopian-ckanext-orgportals,datopian,ckanext-orgportals,master,5,A CKAN extension for creating organization portals
+alphagov-ckanext-datagovuk,alphagov,ckanext-datagovuk,main,5,CKAN extension for data.gov.uk
+datopian-ckanext-c3charts,datopian,ckanext-c3charts,master,5,c3js based charts for CKAN
+ngds-ckanext-geoserver-bku03232018,ngds,ckanext-geoserver-bku03232018,master,5,
+ongov-ckanext-ontario_theme,ongov,ckanext-ontario_theme,main,5,Theme for Ontario's CKAN based data catalogues.
+datagovau-ckanext-zippreview,datagovau,ckanext-zippreview,master,5,"Preview contents of ZIP files, even if they are hosted on external sites"
+datopian-ckanext-datapub,datopian,ckanext-datapub,master,5,CKAN extension to integrate your custom DataPub.js based dataset and resource editor
+georgepm-ckanext-sparql,georgepm,ckanext-sparql,master,5,SPARQL Interface for Ckan
+etri-odp-ckanext-resourceauthorizer,etri-odp,ckanext-resourceauthorizer,master,5,Resource authorizing extension for CKAN
+okfn-ckanext-ecportal,okfn,ckanext-ecportal,master,5,CKAN extension for the European Union Open Data Portal
+NaturalHistoryMuseum-ckanext-ckanpackager,NaturalHistoryMuseum,ckanext-ckanpackager,main,5,A CKAN extension that provides a user interface to download resources with ckanpackager.
+kata-csc-ckanext-shibboleth,kata-csc,ckanext-shibboleth,master,5,CKAN shibboleth identification plugin
+AjuntamentdeBarcelona-ckanext-federagobes,AjuntamentdeBarcelona,ckanext-federagobes,master,5,
+datopian-ckanext-validation,datopian,ckanext-validation,master,5,
+bopen-ckanext-mapsearch,bopen,ckanext-mapsearch,master,5,A CKAN extension to add an scale-aware map-centred search
+okfn-ckanext-datacatalogs,okfn,ckanext-datacatalogs,master,5,CKAN datacatalogs.org theme
+PopulateTools-ckanext-ansible-workflow,PopulateTools,ckanext-ansible-workflow,master,5,Ansible role for managing and deploying CKAN extensions
+openresearchdata-ckanext-oaipmh,openresearchdata,ckanext-oaipmh,master,4,OAI-PMH harvester for CKAN
+cfpb-ckanext-cfpb-extrafields,cfpb,ckanext-cfpb-extrafields,master,4,
+EUDAT-B2FIND-ckanext-datesearch,EUDAT-B2FIND,ckanext-datesearch,master,4,
+fraunhoferfokus-ckanext-govdatade,fraunhoferfokus,ckanext-govdatade,master,4,GovData.de specific CKAN extension
+GovDataOfficial-ckanext-dcatde,GovDataOfficial,ckanext-dcatde,master,4,DE: Dieses Repository beinhaltet die Erweiterung von ckanext-dcat auf die Spezifikation DCAT-AP.de. EN: This is a DCAT-AP.de specific CKAN extension for providing and importing DCAT-AP.de-Profile data.
+kata-csc-ckanext-ddi,kata-csc,ckanext-ddi,master,4,DDI harvester for ckanext-kata
+ckan-ckanext-searchhistory,ckan,ckanext-searchhistory,master,4,Save search history to be used later for autocomplete and statistics
+datopian-ckanext-opendatani,datopian,ckanext-opendatani,master,4,
+NaturalHistoryMuseum-ckanext-gallery,NaturalHistoryMuseum,ckanext-gallery,main,4,CKAN extension for a dataset gallery view.
+gsi-cyberjapan-ckanext-basemaps,gsi-cyberjapan,ckanext-basemaps,master,4,ckanext basemaps plugin
+datopian-ckanext-edo,datopian,ckanext-edo,master,4,
+CodeandoMexico-ckanext-datamx_theme,CodeandoMexico,ckanext-datamx_theme,master,4,Codeando Mexico's Custom Theme CKAN Extension.
+whythawk-ckanext-ldap,whythawk,ckanext-ldap,master,4,LDAP authentication for ckan
+PublicaMundi-ckanext-vectorstorer,PublicaMundi,ckanext-vectorstorer,master,4,"CKAN extension to upload vector geospatial data, store and publish through OGC services."
+okfde-ckanext-offenedaten,okfde,ckanext-offenedaten,master,4,CKAN extension for OffeneDaten.de (theme/UI & harvesters)
+VilledeMontreal-ckanext-montreal,VilledeMontreal,ckanext-montreal,master,4,Theming extension for Montreal city.
+damalaga-ckanext-malaga,damalaga,ckanext-malaga,v2.0-para-CKAN2.3-respon,4,Málaga city council CKAN Extension
+datagovuk-ckanext-taxonomy,datagovuk,ckanext-taxonomy,master,4,Hierarchical tags
+okfn-ckanext-collaborators,okfn,ckanext-collaborators,master,4,User-level permissions for CKAN datasets
+okfn-ckanext-apps,okfn,ckanext-apps,master,4,[DEPRECATED - now part of CKAN core as of v1.7] Apps and ideas catalogue extension for CKAN. Associate apps and ideas to datasets.
+OCHA-DAP-ckanext-powerview,OCHA-DAP,ckanext-powerview,master,4,
+ogdch-ckanext-ogdch,ogdch,ckanext-ogdch,develop,4,CKAN templates and translations for opendata.admin.ch
+datopian-ckanext-montrosemaps,datopian,ckanext-montrosemaps,master,4,
+alexbyrnes-ckanext-mongodb,alexbyrnes,ckanext-mongodb,master,4,CKAN extension for MongoDB
+datopian-ckanext-gosh,datopian,ckanext-gosh,master,4,Extension  for housing custom modification to the ckan gosh portal
+NaturalHistoryMuseum-ckanext-dev,NaturalHistoryMuseum,ckanext-dev,master,4,CKAN extention for development tools.
+datopian-ckanext-birmingham,datopian,ckanext-birmingham,master,4,
+datopian-ckanext-abtassociates,datopian,ckanext-abtassociates,master,4,
+etalab-ckanext-fedmsg,etalab,ckanext-fedmsg,master,4,CKAN extension for sending activity events to the Fedora Infrastructure Message Bus (fedmsg)
+datopian-ckanext-aircan,datopian,ckanext-aircan,master,4,The custom extension for notifying(triggering) the Airflow DAG about the data to be uploaded to DataStore
+Helsingin-kaupungin-tietokeskus-ckanext-hrifi,Helsingin-kaupungin-tietokeskus,ckanext-hrifi,master,4,CKAN theme for ckan.hri.fi
+srkunze-ckanext-semantic,srkunze,ckanext-semantic,master,4,integration of lodstats and personalization features based on it
+datopian-ckanext-panamatheme,datopian,ckanext-panamatheme,master,4,
+okfn-ckanext-csw,okfn,ckanext-csw,master,4,
+datopian-ckanext-logstash,datopian,ckanext-logstash,master,4,
+etalab-ckanext-oauth2,etalab,ckanext-oauth2,master,4,OAuth2 support for CKAN
+EnviDat-ckanext-envidat_theme,EnviDat,ckanext-envidat_theme,master,4,Extension to to customize the content and appearance of CKAN for the Envidat project (WSL)
+datarefuge-ckanext-datarefuge_theme,datarefuge,ckanext-datarefuge_theme,master,4,CKAN Theme for Data Refuge Repository
+datopian-ckanext-datastore-bigquery,datopian,ckanext-datastore-bigquery,master,4,An extension that backs CKAN's datastore on Google BigQuery
+datopian-ckanext-dataexplorer-react,datopian,ckanext-dataexplorer-react,master,4,A new Data Explorer for CKAN built on React.
+aptivate-ckanext-syndicate,aptivate,ckanext-syndicate,master,3,A CKAN plugin that allows syndication (pushing) of datasets to another ckan repository
+nhsengland-ckanext-adfs,nhsengland,ckanext-adfs,master,3,Active Directory authentication for CKAN
+davidread-ckanext-downloadall,davidread,ckanext-downloadall,master,3,"CKAN extension that adds a ""Download all"" button to datasets"
+conwetlab-ckanext-storepublisher,conwetlab,ckanext-storepublisher,master,3,CKAN extension to publish public datasets in the FIWARE Store as offerings
+datagovau-ckanext-ga-report,datagovau,ckanext-ga-report,dga-master,3,Google analytics report for CKAN
+rossjones-ckanext-gdoc,rossjones,ckanext-gdoc,master,3,A previewer for CKAN that uses the Google Doc Previewer to view documents
+OpenGov-OpenData-ckanext-bostonschema,OpenGov-OpenData,ckanext-bostonschema,master,3,
+developmentseed-ckanext-mvt,developmentseed,ckanext-mvt,develop,3,CKAN extension to generate Vector Tiles from vector data
+EUDAT-B2FIND-ckanext-b2find,EUDAT-B2FIND,ckanext-b2find,master,3,B2FIND extension for CKAN
+GSA-ckanext-extlink,GSA,ckanext-extlink,master,3,
+abgov-ckanext-workflow,abgov,ckanext-workflow,master,3,
+yacme-ckanext-googleauth,yacme,ckanext-googleauth,master,3,CKAN extension for use Google as authentication authority
+redlink-gmbh-ckanext-redlink,redlink-gmbh,ckanext-redlink,master,3,CKAN extension to connect to Redlink triple store.
+okfn-ckanext-importlib,okfn,ckanext-importlib,master,3,
+okfn-ckanext-tsbsatellites,okfn,ckanext-tsbsatellites,master,3,repo for Satellites Catapult's CKAN
+GSA-ckanext-dcat_usmetadata,GSA,ckanext-dcat_usmetadata,main,3,
+CityOfPhiladelphia-ckanext-highlight-related-items,CityOfPhiladelphia,ckanext-highlight-related-items,master,3,Surface a dataset's related items more visibly
+okfn-ckanext-resourcesfilter,okfn,ckanext-resourcesfilter,master,3,Interactive paginated resources list for the CKAN dataset page
+ckan-ckanext-rq,ckan,ckanext-rq,master,3,Backport of RQ background jobs for CKAN versions before 2.7.0
+datopian-ckanext-honduras,datopian,ckanext-honduras,master,3,
+NaturalHistoryMuseum-ckanext-graph,NaturalHistoryMuseum,ckanext-graph,main,3,A CKAN extension that adds a graph view for resources.
+okfn-ckanext-storage,okfn,ckanext-storage,master,3,CKAN storage extension.
+alantygel-ckanext-semantictags,alantygel,ckanext-semantictags,master,3,CKAN Extensions for making semantic tags available
+openresearchdata-ckanext-ord-hierarchy,openresearchdata,ckanext-ord-hierarchy,master,3,An extension to add a hierarchical structure to datasets
+asc-csa-ckanext-asc-csa,asc-csa,ckanext-asc-csa,master,3,📈 Extension CKAN pour le portail de données et information ouvertes de l'ASC | 📈CKAN Extension for the CSA open data and information portal
+NaturalHistoryMuseum-ckanext-versioned-datastore,NaturalHistoryMuseum,ckanext-versioned-datastore,main,3,A CKAN extension providing a versioned datastore using MongoDB and Elasticsearch.
+opendatamonitor-ckanext-harmonisation,opendatamonitor,ckanext-harmonisation,master,3,Tool for harmonising metadata labels and values
+okfn-ckanext-demo,okfn,ckanext-demo,master,3,ckan demo site extension
+datopian-ckanext-story,datopian,ckanext-story,master,3,
+dataoverheid-ckanext-donl,dataoverheid,ckanext-donl,master,3,CKAN extensie voor data.overheid.nl
+datopian-ckanext-coastal,datopian,ckanext-coastal,master,3,
+belgium-its-steering-committee-ckanext-benap,belgium-its-steering-committee,ckanext-benap,master,3,Belgium's multimodal transport service catalogue
+NaturalHistoryMuseum-ckanext-gbif,NaturalHistoryMuseum,ckanext-gbif,main,3,A CKAN extension that that connects with the GBIF API.
+okfn-ckanext-drupal,okfn,ckanext-drupal,master,3,drual integration
+CENDARI-ckanext-dariahshibboleth,CENDARI,ckanext-dariahshibboleth,master,3,DARIAH Shibboleth authentication plugin for CKAN
+etri-odp-ckanext-keycloak,etri-odp,ckanext-keycloak,master,3,SSO authentication extension with Keycloak for CKAN
+microcomp-ckanext-torrent,microcomp,ckanext-torrent,master,3,"CKAN extension that enables creating torrent files (seeding, tracking)"
+okfn-ckanext-feedcontent,okfn,ckanext-feedcontent,master,3,Allows for content from rss/atom feeds to be inserted into pages.
+keitaroinc-ckanext-datagovmk,keitaroinc,ckanext-datagovmk,master,3,
+datopian-ckanext-auth,datopian,ckanext-auth,master,3,Login via CKAN Classic from a separate service.
+geosolutions-it-ckanext-geonode,geosolutions-it,ckanext-geonode,master,3,CKAN harvester for GeoNode instances
+okfn-ckanext-oauth,okfn,ckanext-oauth,master,3,
+BioplatformsAustralia-ckanext-bpatheme,BioplatformsAustralia,ckanext-bpatheme,master,3,CKAN theme for BPA
+aliwaqas333-ckanext-kpodp_theme,aliwaqas333,ckanext-kpodp_theme,master,3,KP opendata portal ckanext theme. Site is up at http://opendata.kp.gov.pk
+EnviDat-ckanext-envidat_schema,EnviDat,ckanext-envidat_schema,master,3,Implementation of the metadata schema for Envidat based on scheming and repeating extensions
+datopian-ckanext-us_ed_theme,datopian,ckanext-us_ed_theme,master,3,Theming extension for US Dept. of Education portal
+datopian-ckanext-vitalstrategies_shanghai,datopian,ckanext-vitalstrategies_shanghai,master,3,
+cbgaindia-ckanext-openbudgetsin_theme,cbgaindia,ckanext-openbudgetsin_theme,master,3,Custom CKAN theme extension for Open Budgets India
+GSA-ckanext-saml2,GSA,ckanext-saml2,datagov/v0.4.0,2,SAML2 Athentication extension
+6aika-ckanext-rating,6aika,ckanext-rating,master,2,
+datagovau-ckanext-cesiumpreview,datagovau,ckanext-cesiumpreview,master,2,A plugin to CKAN to use National Map as a previewer for data.gov.au.
+datagovau-ckanext-agls,datagovau,ckanext-agls,master,2,AGLS metadata extension for CKAN
+vrk-kpa-ckanext-ytp-comments,vrk-kpa,ckanext-ytp-comments,master,2,CKAN extension for adding comments to datasets
+open-data-ckanext-recombinant,open-data,ckanext-recombinant,master,2,Create datastore tables for organizations and provide combined output
+NaturalHistoryMuseum-ckanext-userdatasets,NaturalHistoryMuseum,ckanext-userdatasets,main,2,"A CKAN extension that allows organisation members to create datasets, and edit or delete the datasets they have created."
+keitaroinc-ckanext-cas,keitaroinc,ckanext-cas,master,2,CAS (Central Authentication Service) client extension for CKAN
+datagovsg-ckanext-s3-resources,datagovsg,ckanext-s3-resources,master,2,CKAN Extension to upload resources to AWS S3 https://data.gov.sg
+datosgcba-ckanext-gcbaandinotheme,datosgcba,ckanext-gcbaandinotheme,master,2,Repositorio del theme visual de Andino para el portal de Datos Abiertos de la Ciudad Autónoma de Buenos Aires. http://data.buenosaires.gob.ar/
+datagovau-ckanext-datagovau,datagovau,ckanext-datagovau,master,2,Site specific customisations for the hosting of data.gov.au.
+CodeForAfrica-ckanext-notify,CodeForAfrica,ckanext-notify,master,2,[EXPERIMENTAL] CKAN extension to provide more options for notifications such as Slack notifications.
+conwetlab-ckanext-wirecloud_view,conwetlab,ckanext-wirecloud_view,master,2,Provide visualization dashboards on CKAN using WireCloud
+data-govt-nz-ckanext-dia_theme,data-govt-nz,ckanext-dia_theme,master,2,CKAN theme for the New Zealand open data portal - data.govt.nz
+okfn-ckanext-hidegroups,okfn,ckanext-hidegroups,master,2,A CKAN 2 extension that removes CKAN's groups feature from the web interface
+govro-ckanext-inventory,govro,ckanext-inventory,master,2,CKAN extension for receiving dataset inventories from organizations
+ckan-ckanext-repo,ckan,ckanext-repo,master,2,Shows information about the CKAN and extensions versions an instance is running. Mostly useful for development sites.
+vrk-kpa-ckanext-ytp-request,vrk-kpa,ckanext-ytp-request,master,2,Organization member request handling
+okfn-ckanext-socrata,okfn,ckanext-socrata,master,2,CKAN harvester extension for Socrata data catalogs
+datopian-ckanext-dundee,datopian,ckanext-dundee,master,2,Theming extension for Dundee city
+datalocale-ckanext-datalocale,datalocale,ckanext-datalocale,master,2,extension CKAN développée pour le projet http://catalogue.datalocale.fr
+ckan-ckanext-persona,ckan,ckanext-persona,master,2,A CKAN extension for logging in using Mozilla Persona
+qld-gov-au-ckanext-s3filestore,qld-gov-au,ckanext-s3filestore,master,2,Use Amazon S3 as a filestore for CKAN
+PopulateTools-ckanext-topics,PopulateTools,ckanext-topics,master,2,Topics and subtopics for classifying datasets in CKAN
+jorabra-ckanext-simplesso,jorabra,ckanext-simplesso,master,2,A simple CKAN SSO plugin
+shidax-ckanext_notification,shidax,ckanext_notification,master,2,An example of CKAN extension. Notify new resource via the twitter
+zbw-ckanext-dara,zbw,ckanext-dara,master,2,CKAN extension that integrates da|ra metadata schema and enables DOI registration for research data
+cphsolutionslab-ckanext-customuserprivileges,cphsolutionslab,ckanext-customuserprivileges,master,2,
+nhsengland-ckanext-introjs,nhsengland,ckanext-introjs,master,2,Adds intro.js to CKAN so users can follow a guided tour of the UI.
+okfn-ckanext-facetcollapse,okfn,ckanext-facetcollapse,master,2,
+UCSUR-Pitt-ckanext-wprdctheme,UCSUR-Pitt,ckanext-wprdctheme,master,2,This is an extension to CKAN that provides a custom theme for the Western Pennsylvania Regional Data Center. 
+ckan-ckanext-eurovoc,ckan,ckanext-eurovoc,master,2,Add Eurovoc categories to CKAN's dataset schema
+openclimatefix-ckanext-openenergy,openclimatefix,ckanext-openenergy,master,2,Special customisations for the Energy Data Search.
+okfn-ckanext-follower,okfn,ckanext-follower,master,2,CKAN Follower Extension
+datopian-ckanext-opendataje,datopian,ckanext-opendataje,master,2,
+datopian-ckanext-inverness,datopian,ckanext-inverness,master,2,Theming extension for Inverness city
+ciudadanointeligente-ckanext-junar,ciudadanointeligente,ckanext-junar,master,2,Connector for ckan to use junar.com
+datopian-ckanext-viderum,datopian,ckanext-viderum,master,2,Viderum default extension for CKAN
+depositar-ckanext-wikidatakeyword,depositar,ckanext-wikidatakeyword,master,2,Wikidata-powered keyword field for CKAN
+etri-odp-ckanext-jena,etri-odp,ckanext-jena,master,2,Semantic data management extension with Apache Jena for CKAN
+berlinonline-ckanext-berlin,berlinonline,ckanext-berlin,master,2,CKAN extension for the datenregister.berlin.de portal
+okfn-ckanext-stats,okfn,ckanext-stats,master,2,
+okfn-ckanext-social,okfn,ckanext-social,master,2,
+camptocamp-ckanext-theme,camptocamp,ckanext-theme,geo2france,2,CKAN theme for geOrchestra SDIs
+berlinonline-ckanext-fisbroker,berlinonline,ckanext-fisbroker,master,2,CKAN Plugin to harvest Berlin's FIS-Broker geographic information system into the datenregister.berlin.de schema.
+datopian-ckanext-montrose,datopian,ckanext-montrose,master,2,
+okfn-ckanext-dgutheme,okfn,ckanext-dgutheme,master,2,
+fraunhoferfokus-ckanext-berlin,fraunhoferfokus,ckanext-berlin,master,2,
+berlinonline-ckanext-validationapi,berlinonline,ckanext-validationapi,master,2,A public API for CKAN's validator functions
+AURIN-ckanext-aurintheme,AURIN,ckanext-aurintheme,master,2,AURIN theme
+thenets-ckanext-dadosabertos,thenets,ckanext-dadosabertos,master,2,Plugin / Tema do Portal de Dados Abertos do Governo Federal - Brasil
+reedv-ckanext-publicrestrictiondatasets,reedv,ckanext-publicrestrictiondatasets,main,2,
+datopian-ckanext-perth,datopian,ckanext-perth,master,2,Theming extension for Perth city
+datopian-ckanext-nokia,datopian,ckanext-nokia,master,2,
+ilrt-ckanext-oaipmh,ilrt,ckanext-oaipmh,master,2,OAI PMH extension to CKAN
+okfn-ckanext-iceland,okfn,ckanext-iceland,master,2,Icelandic theme for CKAN
+boykoc-ckanext-msal,boykoc,ckanext-msal,master,2,
+kata-csc-ckanext-rems,kata-csc,ckanext-rems,master,2,REMS extension for CKAN
+NextGeoss-ckanext-nextgeoss,NextGeoss,ckanext-nextgeoss,master,2,Theme for NextGEOSS data hub
+datopian-ckanext-opnv,datopian,ckanext-opnv,master,2,Extension for German public transport companies' portal.
+rossjones-ckanext-statsd,rossjones,ckanext-statsd,master,2,Simple statsd metrics for CKAN
+okfn-ckanext-htsql,okfn,ckanext-htsql,master,2,An extension that enables htsql queries for the new datastore.
+datopian-ckanext-aridhia,datopian,ckanext-aridhia,master,2,
+wardi-ckanext-fileedit,wardi,ckanext-fileedit,master,2,Simple file editor for CKAN admin panel
+abgov-ckanext-geomapviewer,abgov,ckanext-geomapviewer,master,2,Ckan Geo Map Viewer Extension
+jimmccusker-ckanext-arrayexpress,jimmccusker,ckanext-arrayexpress,master,2,An ArrayExpress importer for CKAN.
+cbgaindia-ckanext-budgetviz,cbgaindia,ckanext-budgetviz,master,2,CKAN Extension to preview visualization for datasets 
+datopian-ckanext-vrr,datopian,ckanext-vrr,master,2,
+shemogumbe-ckanext-dataviewanalytics,shemogumbe,ckanext-dataviewanalytics,master,2,extension for data set visualization statistics
+EnviDat-ckanext-passwordless,EnviDat,ckanext-passwordless,master,2,Extension to allow paswordless login in CKAN
+okfn-ckanext-moderatededits,okfn,ckanext-moderatededits,master,2,Moderated Edits extension for CKAN 1.4
+DataShades-ckanext-githubrepopreview,DataShades,ckanext-githubrepopreview,master,2,A CKAN plugin for previewing GitHub repository resources.
+opendatatrentino-ckanext-patstatweb,opendatatrentino,ckanext-patstatweb,master,2,Harvester script to populate CKAN from the server of the statistics department of the Provincia Autonoma di Trento
+ciudadanointeligente-ckanext-forms,ciudadanointeligente,ckanext-forms,master,2,Manages dataset forms in ckan
+datopian-ckanext-aberdeen,datopian,ckanext-aberdeen,master,2,Theming extension for Aberdeen city.
+ciudadanointeligente-ckanext-forms,ciudadanointeligente,ckanext-forms,master,2,Manages dataset forms in ckan
+okfn-ckanext-moderatededits,okfn,ckanext-moderatededits,master,2,Moderated Edits extension for CKAN 1.4
+DataShades-ckanext-githubrepopreview,DataShades,ckanext-githubrepopreview,master,2,A CKAN plugin for previewing GitHub repository resources.
+datopian-ckanext-aberdeen,datopian,ckanext-aberdeen,master,2,Theming extension for Aberdeen city.
+Psykar-ckanext-ands,Psykar,ckanext-ands,master,2,
+openspending-ckanext-budgets,openspending,ckanext-budgets,master,2,Budget Data Package support for CKAN
+rossjones-ckanext-pubsub,rossjones,ckanext-pubsub,master,2,WIP: Instant notifications for datasets.
+geosolutions-it-ckanext-mapstore,geosolutions-it,ckanext-mapstore,master,2,CKAN Extension for MapStore Preview and GeoStore Harvesting
+datopian-ckanext-vag,datopian,ckanext-vag,master,2,
+data-govt-nz-ckanext-dia,data-govt-nz,ckanext-dia,master,2,A simple CKAN extension to hold all overrides to CKAN required by the DIA (Department of Internal Affairs).
+NextGeoss-ckanext-nextgeossharvest,NextGeoss,ckanext-nextgeossharvest,master,2,Harvesters for NextGEOSS
+conwetlab-ckanext-datastore_restful,conwetlab,ckanext-datastore_restful,master,2,Extension that provides a fully Restful API to access the data contained in the DataStore. 
+datopian-ckanext-asset-storage,datopian,ckanext-asset-storage,master,2,CKAN extension implementing IUploader interface for cloud storage of assets e.g. images. Intended for use with ckanext-blob-storage that provides direct to cloud storage of resource data.
+DCOR-dev-ckanext-dc_view,DCOR-dev,ckanext-dc_view,master,2,Preview DC data in DCOR
+DataShades-ckanext-create_typed_package,DataShades,ckanext-create_typed_package,master,2,
+EnviDat-ckanext-package_converter,EnviDat,ckanext-package_converter,master,2,CKAN Extension for converting metadata
+opendatazurich-ckanext-stadtzh-harvest,opendatazurich,ckanext-stadtzh-harvest,master,2,Harvester extension for the City of Zurich
+datopian-ckanext-saasportal_quote,datopian,ckanext-saasportal_quote,master,2,
+conwetlab-ckanext-fiware_header,conwetlab,ckanext-fiware_header,master,2,
+CSIRO-enviro-informatics-ckanext-user_ext,CSIRO-enviro-informatics,ckanext-user_ext,master,2,
+NaturalHistoryMuseum-ckanext-contact,NaturalHistoryMuseum,ckanext-contact,main,1,A CKAN extension for adding popup contact forms to pages.
+etalab-ckanext-sentry,etalab,ckanext-sentry,master,1,Sentry support for CKAN
+DataShades-ckanext-workflow,DataShades,ckanext-workflow,master,1,
+telefonicaid-ckanext-ngsiview,telefonicaid,ckanext-ngsiview,master,1,ckanext-ngsiview
+opintel-ckanext-mxtheme,opintel,ckanext-mxtheme,master,1,Template CKAN para datos.gob.mx
+kata-csc-ckanext-sitemap,kata-csc,ckanext-sitemap,master,1,Sitemap search engine support for CKAN
+jesusredondo-ckanext-federgob,jesusredondo,ckanext-federgob,master,1,"Extension to ease the federation process of CKAN catalogs with the global catalog of Spain, [Datos.gob](http://www.datos.gob.es/)."
+aptivate-ckanext-userautoadd,aptivate,ckanext-userautoadd,master,1,CKAN extension to add new users to an existing organization
+datagovuk-ckanext-certificates,datagovuk,ckanext-certificates,master,1,Retrieval and helpers for ODI Open Data certificates
+abgov-ckanext-open_alberta,abgov,ckanext-open_alberta,master,1,Ckan extension developed for use on open.alberta.ca
+opendatatrentino-ckanext-datitrentinoit,opendatatrentino,ckanext-datitrentinoit,master,1,Ckan customizations for OpenData Trentino
+GSA-ckanext-googleanalyticsbasic,GSA,ckanext-googleanalyticsbasic,main,1,Basic ckan extension to add google analytics tracking code in page header
+wardi-ckanext-geocodejob,wardi,ckanext-geocodejob,master,1,
+ngds-ckanext-metadata-bku03232018,ngds,ckanext-metadata-bku03232018,master,1,
+cityofsurrey-ckanext-surrey,cityofsurrey,ckanext-surrey,master,1,CKAN extension for city of surrey
+CodeForAfrica-ckanext-socialite,CodeForAfrica,ckanext-socialite,develop,1,"[EXPERIMENTAL] A CKAN extension to allow login using Google, Facebook, Twitter or Github."
+EUDAT-B2FIND-ckanext-timeline,EUDAT-B2FIND,ckanext-timeline,master,1,Timeline extension for CKAN
+ViderumGlobal-ckanext-ed,ViderumGlobal,ckanext-ed,master,1,Codebase for Dept of Ed Open Data Project
+maulikkamdar-ckanext-feedback,maulikkamdar,ckanext-feedback,master,1,This extension provides a simple feedback form for submitting data requests through the CKAN System.
+XVTSolutions-ckanext-extend_search,XVTSolutions,ckanext-extend_search,master,1,Extends Ckan's search with additional options
+ngds-ckanext-mapsearch-bku03232018,ngds,ckanext-mapsearch-bku03232018,master,1,
+ozwillo-ckanext-ozwillo-theme,ozwillo,ckanext-ozwillo-theme,master,1,Ozwillo theme for the CKAN platform
+govro-ckanext-romania_theme,govro,ckanext-romania_theme,master,1,
+gfenoy-ckanext-wps,gfenoy,ckanext-wps,master,1,CKAN extension for accessing OGC WPS capabilties
+bcgov-ckanext-sso,bcgov,ckanext-sso,dev,1,OpenID connect plugin for CKAN used by the B.C. Catalogue.
+okfn-ckanext-sa,okfn,ckanext-sa,master,1,Custom CKAN extension for data.sa.gov.au
+Helsingin-kaupungin-tietokeskus-ckanext-multiedit,Helsingin-kaupungin-tietokeskus,ckanext-multiedit,master,1,Multiedit extension for CKAN
+Cadasta-ckanext-project,Cadasta,ckanext-project,master,1,[DEPRECATED] Implementation of the CKAN prototype for the Cadasta platform
+DEFRA-ckanext-defra,DEFRA,ckanext-defra,master,1,CKAN extension for Defra data metadata catalogue
+DataShades-ckanext-acl,DataShades,ckanext-acl,master,1,CKAN extension to manage permissions of individual CKAN users
+qld-gov-au-ckanext-data-qld,qld-gov-au,ckanext-data-qld,develop,1,Queensland Government Open Data extension
+ngds-ckanext-ogcpreview-bku03232018,ngds,ckanext-ogcpreview-bku03232018,master,1,
+abgov-ckanext-ab_scheming,abgov,ckanext-ab_scheming,master,1,Dataset scheming extension used on open.alberta.ca
+datagovuk-ckanext-dgu-local,datagovuk,ckanext-dgu-local,master,1,Support for harvesting from Local Authorities
+okfn-ckanext-sgdata,okfn,ckanext-sgdata,master,1,A CKAN extension for the Singapore Ministry of Finance's metadata catalog.
+zbw-ckanext-edawax,zbw,ckanext-edawax,master,1,CKAN extension for ZBW Journal Data Archive
+open-data-ckanext-history,open-data,ckanext-history,master,1,Improved history tab for CKAN
+NaturalHistoryMuseum-ckanext-feedback,NaturalHistoryMuseum,ckanext-feedback,master,1,Feedback extension for CKAN
+DataShades-ckanext-excelimport,DataShades,ckanext-excelimport,master,1,CKAN extension for creating/updating datasets via a zip file containing an excel metadata template
+milicp-ckanext-semre,milicp,ckanext-semre,master,1,CKAN extension for RDF description of dataset relationships
+datacats-ckanext-ottawa,datacats,ckanext-ottawa,master,1,v2
+CodeandoMexico-ckanext-openrefine,CodeandoMexico,ckanext-openrefine,master,1,CKAN Extension for adding Open Refine analysis into your dataset resources. 
+jonlazaro-ckanext-sparql,jonlazaro,ckanext-sparql,master,1,
+TIBHannover-ckanext-dwgviewer,TIBHannover,ckanext-dwgviewer,master,1,A drawing (AutoCAD) file viewer for ckan
+mmoyles87-ckanext-oauth2provider,mmoyles87,ckanext-oauth2provider,master,1,Allows other applications to login to a ckan instance using OAuth2
+CSIRO-enviro-informatics-ckanext-user_opt_in,CSIRO-enviro-informatics,ckanext-user_opt_in,master,1,
+depositar-ckanext-data-depositario,depositar,ckanext-data-depositario,master,1,CKAN extension for depositar
+geosolutions-it-ckanext-azure-auth,geosolutions-it,ckanext-azure-auth,main,1,
+dadosgovbr-ckanext-dadosgovbr-2014,dadosgovbr,ckanext-dadosgovbr-2014,master,1,"Tema para o CKAN utilizado no portal dados.gov.br, na versão implantada em 2014, com CKAN 2.2."
+opendatazurich-ckanext-stadtzh-theme,opendatazurich,ckanext-stadtzh-theme,master,1,CKAN theme for the City of Zurich
+salzburgerland-ckanext-salzburgerland_tourismus_theme,salzburgerland,ckanext-salzburgerland_tourismus_theme,master,1,Salzburgerland Tourismus CKAN theme
+dpp-dev-ckanext-latvian-theme,dpp-dev,ckanext-latvian-theme,master,1,
+alabs-ckanext-carchi_theme,alabs,ckanext-carchi_theme,master,1,Theme para el CKAN del GAD del Carchi
+data-govt-nz-ckanext-protected_resources,data-govt-nz,ckanext-protected_resources,master,1,A plugin for CKAN that enables a system administrator to protect dataset resources from accidental deletion
+OpenUpSA-ckanext-discourse-sso,OpenUpSA,ckanext-discourse-sso,master,1,Discourse SSO with CKAN as the user authority
+Hoedic-ckanext-recaptcha,Hoedic,ckanext-recaptcha,master,1,Correct the bug for the missing recaptcha widget at registration
+opennorth-ckanext-whiterock,opennorth,ckanext-whiterock,master,1,CKAN extension for City of White Rock
+okfn-ckanext-hideorganizations,okfn,ckanext-hideorganizations,master,1,A CKAN 2 extension that removes CKAN's organizations feature
+ccca-dc-ckanext-thredds,ccca-dc,ckanext-thredds,master,1,
+datagovuk-ckanext-schemadotorg,datagovuk,ckanext-schemadotorg,master,1,
+datopian-ckanext-zip,datopian,ckanext-zip,master,1,Add an option to download resource file in a zip format
+vrk-kpa-ckanext-matomo,vrk-kpa,ckanext-matomo,main,1,
+cphsolutionslab-ckanext-cphopendata,cphsolutionslab,ckanext-cphopendata,master,1,Theme for cph.opendata.dk
+okfn-ckanext-singapore,okfn,ckanext-singapore,master,1,
+CodeForAfrica-ckanext-followy,CodeForAfrica,ckanext-followy,master,1,[ARCHIVED] A CKAN extension to show the datasets a user is following.
+ngds-ckanext-geoserver,ngds,ckanext-geoserver,master,1,
+SAERI-Datacenter-ckanext-saerischema,SAERI-Datacenter,ckanext-saerischema,master,1,CKAN metadata schema for SAERI
+hwaring-ckanext-licenses,hwaring,ckanext-licenses,master,1,allows you to add your own licenses
+gzarrub-ckanext-ngsipreview,gzarrub,ckanext-ngsipreview,master,1,
+okfn-ckanext-recline,okfn,ckanext-recline,master,1,[Obsolete?] A CKAN preview extension to preview tabular data using recline
+datopian-ckanext-nav,datopian,ckanext-nav,master,1,CKAN Extension for customization of NAV portal 
+etri-odp-ckanext-hdfs,etri-odp,ckanext-hdfs,master,1,HDFS storing extension for CKAN
+GovDataOfficial-ckanext-searchindexhook,GovDataOfficial,ckanext-searchindexhook,master,1,CKAN extension to synchronize CKAN data with an elasticsearch search index
+okfn-ckanext-hampshire,okfn,ckanext-hampshire,master,1,Extension for hampshire
+okfn-ckanext-kenya,okfn,ckanext-kenya,master,1,
+jimmccusker-ckanext-datapub,jimmccusker,ckanext-datapub,master,1,
+Chealer-ckanext-categroupy,Chealer,ckanext-categroupy,master,1,Plugin to rename CKAN's dataset groups
+keitaroinc-ckanext-resourcedictionary,keitaroinc,ckanext-resourcedictionary,main,1,CKAN extension that extends the default CKAN Data Dictionary functionality by adding the possibility to create a data dictionary before actual data is uploaded to datastore.
+deniszgonjanin-ckanext-geojsonview,deniszgonjanin,ckanext-geojsonview,master,1,A simple GeoJSON Resource View for CKAN 2.3+
+Helsingin-kaupungin-tietokeskus-ckanext-comments,Helsingin-kaupungin-tietokeskus,ckanext-comments,master,1,A plugin for enabling commenting on CKAN by proxying them to and from WordPress through XML-RPC API.
+ConocimientoAbierto-ckanext-evaluator,ConocimientoAbierto,ckanext-evaluator,master,1,
+NaturalHistoryMuseum-ckanext-statistics,NaturalHistoryMuseum,ckanext-statistics,main,1,A CKAN extension for accessing download statistics
+okfn-ckanext-webhooks,okfn,ckanext-webhooks,master,1,
+kindly-ckanext-spatial,kindly,ckanext-spatial,master,1,
+fumi-ckanext-mimetypes,fumi,ckanext-mimetypes,master,1,Custom mimetypes extension
+XVTSolutions-ckanext-vdojtheme,XVTSolutions,ckanext-vdojtheme,master,1,
+openspending-ckanext-openspending,openspending,ckanext-openspending,master,1,CKAN OpenSpending integration extension
+keitaroinc-ckanext-purge,keitaroinc,ckanext-purge,master,1,
+data-govt-nz-ckanext-raygun,data-govt-nz,ckanext-raygun,master,1,Raygun application monitoring of CKAN
+lightbase-ckanext-datadaemon,lightbase,ckanext-datadaemon,master,1,Ckan based datadaemon that loads an RDF and store it as a resource
+ckan-ckanext-widgets,ckan,ckanext-widgets,master,1,helper widgets to help render atom/rss feeds for CKAN themes
+okfn-ckanext-nsw,okfn,ckanext-nsw,master,1,
+tolletaten-ckanext-tolltheme,tolletaten,ckanext-tolltheme,master,1,
+aptivate-ckanext-countrygroup,aptivate,ckanext-countrygroup,master,1,CKAN plugin for grouping datasets into countries. Forked from https://github.com/OCHA-DAP/hdx-ckan
+openresearchdata-ckanext-openbis,openresearchdata,ckanext-openbis,master,1,OpenBis harvester based on ckanext-oaipmh
+XVTSolutions-ckanext-reorder,XVTSolutions,ckanext-reorder,master,1,Allows dataset editors to reorder the positioning of resources.
+damalaga-ckanext-federador,damalaga,ckanext-federador,master,1,Federación de portal CKAN en datos.gob.es
+dadosgovbr-ckanext-dadosgovbrschema,dadosgovbr,ckanext-dadosgovbrschema,master,1,"Implementation of a schema, using the ckanext-schema extension, for the Brazilian Open Data Portal."
+opendatatrentino-ckanext-sentry,opendatatrentino,ckanext-sentry,master,1,Hooks the Sentry's raven plugin into ckan/pylons wsgi middleware chain.
+datopian-ckanext-meerbusch,datopian,ckanext-meerbusch,master,1,
+ngds-ckanext-spatial,ngds,ckanext-spatial,master,1,
+georchestra-ckanext-georchestra,georchestra,ckanext-georchestra,master,1,geOrchestra extension for CKAN
+datopian-ckanext-gdpr,datopian,ckanext-gdpr,master,1,CKAN extension for GDPR
+SAERI-Datacenter-ckanext-saeritheme,SAERI-Datacenter,ckanext-saeritheme,master,1,Add a theme to CKAN specifically for SAERI
+ngds-ckanext-ngds,ngds,ckanext-ngds,master,1,
+wardi-ckanext-aiglobal,wardi,ckanext-aiglobal,master,1,CKAN Theme extension for portal.ai-global.org
+datopian-ckanext-duplicateresource,datopian,ckanext-duplicateresource,master,1,A CKAN extension to copy an existing resource metadata for another resource
+datagovau-ckanext-datajson,datagovau,ckanext-datajson,master,1,ckanext-datajson customised for Australian metadata profile
+iotaorg-ckanext-iota,iotaorg,ckanext-iota,master,1,CKAN extension for the IOTA
+okfn-ckanext-pakistan,okfn,ckanext-pakistan,master,1,Pakistan Data Portal
+PublicaMundi-ckanext-helloworld,PublicaMundi,ckanext-helloworld,master,1,An helloworld CKAN plugin that demonstrates how to extend metadata schema with a couple of new fields
+okfn-ckanext-queue,okfn,ckanext-queue,master,1,Async queueing for CKAN.
+Honlan-ckanext-mytheme,Honlan,ckanext-mytheme,master,1,This is the theming extension for OmniCkan for outlook improvements
+OpenGov-OpenData-ckanext-datasetpermissioning,OpenGov-OpenData,ckanext-datasetpermissioning,master,1,
+derilinx-ckanext-losd,derilinx,ckanext-losd,master,1,
+davidread-ckanext-analytics,davidread,ckanext-analytics,master,1,For analysing CKAN usage
+aptivate-ckanext-locationgroup,aptivate,ckanext-locationgroup,country-pages-dev,1,CKAN plugin for grouping datasets into countries. Forked from https://github.com/aptivate/ckanext-mapactionevent
+ThrawnCA-ckanext-qgov,ThrawnCA,ckanext-qgov,master,1,Customisations to the CKAN portal for Queensland Government websites
+NaturalHistoryMuseum-ckanext-video,NaturalHistoryMuseum,ckanext-video,main,1,A CKAN extension for embedding Youtube or Vimeo videos as views.
+taijiang-tw-ckanext-taijiang,taijiang-tw,ckanext-taijiang,master,1,CKAN extension for the Taijiang Research Data Repository
+BioplatformsAustralia-ckanext-bulk,BioplatformsAustralia,ckanext-bulk,master,1,"Easy bulk access to CKAN datasets, on Windows, MacOS and Linux"
+canhdc-ckanext-library,canhdc,ckanext-library,master,1,
+datopian-ckanext-stirling,datopian,ckanext-stirling,master,1,Theming extension for Stirling city
+geoenvo-ckanext-onedataportal,geoenvo,ckanext-onedataportal,master,1,
+cuprit-gbr-ckanext-cuprit,cuprit-gbr,ckanext-cuprit,main,1,
+PublicaMundi-ckanext-interlinking,PublicaMundi,ckanext-interlinking,master,1,A CKAN extension that allows resource interlinking using recline.
+UoA-eResearch-ckanext-ezid,UoA-eResearch,ckanext-ezid,master,1,EZID external ID provider for the ckanext-external_id plugin
+vaquer-ckanext-mxtheme,vaquer,ckanext-mxtheme,master,1,Template para el sitio datos.gob.mx
+okfn-ckanext-salford,okfn,ckanext-salford,master,1,Repo for Salford's CKAN instance
+dpp-dev-ckanext-datapackager,dpp-dev,ckanext-datapackager,master,1,
+6aika-ckanext-collection,6aika,ckanext-collection,master,1,
+DataShades-ckanext-charts,DataShades,ckanext-charts,master,1,
+metaodi-ckanext-graphql,metaodi,ckanext-graphql,master,1,GraphQL for CKAN
+DataSpace-Mobility-ckanext-dataspace,DataSpace-Mobility,ckanext-dataspace,master,1,
+open-data-ckanext-extendedactivity,open-data,ckanext-extendedactivity,master,1,Extended activity feeds to include items such as membership changes.
+opendatamonitor-ckanext-harvestodm,opendatamonitor,ckanext-harvestodm,master,1,
+friendlycode-ckanext-datagr,friendlycode,ckanext-datagr,master,1,CKAN extension for data.grcity.us customizations
+okfn-ckanext-aerc,okfn,ckanext-aerc,master,1,AERC demo plugin
+NaturalHistoryMuseum-ckanext-sketchfab,NaturalHistoryMuseum,ckanext-sketchfab,main,1,A CKAN extension for embedding Sketchfab models as views.
+908Inc-ckanext-apps,908Inc,ckanext-apps,master,1,
+abgov-ckanext-classification,abgov,ckanext-classification,master,1,
+vulekamali-ckanext-satreasury,vulekamali,ckanext-satreasury,master,1,SA Treasury CKAN theme extension
+fwoerister-ckanext-mongodatastore,fwoerister,ckanext-mongodatastore,master,1,A datastore backend implementation for CKAN that supports data citation.
+Nithyavasudevan-ckanext-glasgow,Nithyavasudevan,ckanext-glasgow,master,1,CKAN Extensions specific to Open Glasgow
+ElixirTeSS-ckanext-tess,ElixirTeSS,ckanext-tess,master,1,CKAN extension for TeSS training portal
+ogdch-ckanext-transharvest,ogdch,ckanext-transharvest,develop,1,Harvester for term_translations
+okfn-ckanext-colombia,okfn,ckanext-colombia,master,1,
+DataShades-ckanext-message,DataShades,ckanext-message,master,1,
+jahow-ckanext-georchestra,jahow,ckanext-georchestra,master,1,CKAN integration in geOrchestra
+TIBHannover-ckanext-videoviewer,TIBHannover,ckanext-videoviewer,master,1,A video Viewer extension for ckan
+TIBHannover-ckanext-semtag,TIBHannover,ckanext-semtag,master,1,Semantic Tags extension for CKAN
+fjelltopp-ckanext-emailasusername,fjelltopp,ckanext-emailasusername,development,1,CKAN extension allowing users to login and reset passwords with their email as well as their username.
+eradan-ckanext-toscana-harvest,eradan,ckanext-toscana-harvest,master,1,Harvester per Regione Toscana
+routetopa-ckanext_rtpa_anomaly_detection,routetopa,ckanext_rtpa_anomaly_detection,master,1,ROUTE-TO-PA extension - adds TET functionality to CKAN platform - anomaly detection
+tum-gis-ckanext-relation-sddi,tum-gis,ckanext-relation-sddi,master,1,
+Quatral-ckanext-contact_us,Quatral,ckanext-contact_us,master,1,CKAN Extension for a contact us form
+OpenDevelopmentMekong-ckanext-odm_dataset,OpenDevelopmentMekong,ckanext-odm_dataset,master,1,A CKAN extension which provides with template files and logic to implement OD Mekong's datasets
+eradan-ckanext-toscana-reports,eradan,ckanext-toscana-reports,master,1,
+ckan-ckanext-oauth2waad,ckan,ckanext-oauth2waad,master,1,Login to your CKAN site using Windows Azure Active Directory's OAuth 2.0
+knowdive-ckanext-liveschema_theme,knowdive,ckanext-liveschema_theme,master,1,
+nmarolleau53-ckanext-pigma_theme,nmarolleau53,ckanext-pigma_theme,master,1,CKAN theme for the PIGMA project
+datospy-ckanext-datos_theme,datospy,ckanext-datos_theme,master,1,Tema de ckan para el sitio de datos abiertos (datos.org.py) 
+openresearchdata-ckanext-ordbase-theme,openresearchdata,ckanext-ordbase-theme,master,1,CKAN base theme for Open Research Data
+avdata99-ckanext-google_drive_import,avdata99,ckanext-google_drive_import,master,1,Goole Drive Sheet import as dataset in CKAN
+CivicActions-ckanext-ed-docs,CivicActions,ckanext-ed-docs,main,1,Documentation for the Dept of ED CKAN extension
+eawag-rdm-ckanext_eaw_schema,eawag-rdm,ckanext_eaw_schema,master,1,Eawag dataset schema. Builds on ckanext-scheming and ckanext-repeating.
+UoA-eResearch-ckanext-external_id,UoA-eResearch,ckanext-external_id,master,1,Support for external identifiers for datasets
+derilinx-ckanext-dgi-public,derilinx,ckanext-dgi-public,master,1,Source code of data.gov.ie CKAN extension
+EnviDat-ckanext-datacite_publication,EnviDat,ckanext-datacite_publication,master,1,Extension to mint DOIs and publish CKAN datasets in DataCite
+datopian-ckanext-dcat_ap_no,datopian,ckanext-dcat_ap_no,master,1,
+DataShades-ckanext-resource_indexer,DataShades,ckanext-resource_indexer,master,1,
+OpenDataNode-ckanext-storage-admin,OpenDataNode,ckanext-storage-admin,develop,1,
+BetaNYC-ckanext-datacity_theme,BetaNYC,ckanext-datacity_theme,master,1,BetaNYC CKAN theme
+rostock-ckanext-hro_dcatapde,rostock,ckanext-hro_dcatapde,master,1,"A custom implementation of DCAT-AP.de for OpenData.HRO, the open data portal of the municipality of Rostock"
+geological-survey-of-queensland-gsq-ckanext-gsq-theme,geological-survey-of-queensland,gsq-ckanext-gsq-theme,master,1,A CKAN extension styling the Geological Survey of Qld's CKAN instance as per Qld Govt. guidelines
+EnviDat-ckanext-oaipmh_repository,EnviDat,ckanext-oaipmh_repository,master,1,Extension for implementing a custom OAI-PMH for CKAN datasets
+ExchangeBC-ckanext-wso2-harvester,ExchangeBC,ckanext-wso2-harvester,master,1,A WSO2 harvester for CKAN
+XVTSolutions-ckanext-spatialUI,XVTSolutions,ckanext-spatialUI,master,1,
+berlinonline-ckanext-dcatde_berlin,berlinonline,ckanext-dcatde_berlin,master,1,Implementation of dcat-ap.de for daten.berlin.de
+opendata-swiss-ckanext-switzerland-ng,opendata-swiss,ckanext-switzerland-ng,master,1,
+DCOR-dev-ckanext-dcor_theme,DCOR-dev,ckanext-dcor_theme,master,1,The DCOR CKAN theme
+rossjones-ckanext-mo-observations,rossjones,ckanext-mo-observations,master,1,Retrieves and stores weather observation data from the Met Office
+SpaceApplications-ckanext-obeos-ldp,SpaceApplications,ckanext-obeos-ldp,master,1,OBEOS Linked Data Prototype
+salsadigitalauorg-ckanext-invalid-uris,salsadigitalauorg,ckanext-invalid-uris,develop,1,Ckan extension to detect invalid URIs
+nextgis-ckanext-fareast_theme,nextgis,ckanext-fareast_theme,master,1,CKAN Primorskiy theme
+rostock-ckanext-hro_theme,rostock,ckanext-hro_theme,master,1,"A custom theme for OpenData.HRO, the open data portal of the municipality of Rostock"
+ConocimientoAbierto-ckanext-fca_theme,ConocimientoAbierto,ckanext-fca_theme,master,1,
+CSIRO-enviro-informatics-ckanext-dcat-rev,CSIRO-enviro-informatics,ckanext-dcat-rev,master,1,
+geological-survey-of-queensland-gsq-ckanext-scheming,geological-survey-of-queensland,gsq-ckanext-scheming,master,1,Custom scheme for GSQ CKAN
+edincubator-ckanext-edi_theme,edincubator,ckanext-edi_theme,master,1,Theme for EDI project's CKAN
+transparenzportalhamburg-ckanext-distributed-harvester,transparenzportalhamburg,ckanext-distributed-harvester,master,1,This extension extends the CKAN plugin ckanext-harvest to support distributed harvesting capabilities.
+fumi-ckanext-fake-datagojp,fumi,ckanext-fake-datagojp,master,1,ckan extension for datago.jp which is a mirror site of data.go.jp
+keitaroinc-ckanext-mk_dcatap,keitaroinc,ckanext-mk_dcatap,master,1,Macedonian DCAT Profile for CKAN
+CSIRO-enviro-informatics-ckanext-csiro_hub_theme,CSIRO-enviro-informatics,ckanext-csiro_hub_theme,master,1,
+justicehub-in-ckanext-justicehub_theme,justicehub-in,ckanext-justicehub_theme,master,1,CKAN Theme for Justice Hub
+OpenDevelopmentMekong-ckanext-odm_nav,OpenDevelopmentMekong,ckanext-odm_nav,master,1,Extensions exposing common functionalitities to other ckanext-odm* extensions
+okfn-ckanext-demo-classic,okfn,ckanext-demo-classic,master,1,CKAN Demo Extension.
+okfn-ckanext-dsmtheme_example,okfn,ckanext-dsmtheme_example,master,1,An example extension showing how to customize the CKAN frontend
+asc-csa-ckanext-asc-csa-scheming,asc-csa,ckanext-asc-csa-scheming,master,1,📈 Schémas de métadonnées pour https://github.com/asc-csa/ckanext-asc-csa |  📈 Metadata schemas for https://github.com/asc-csa/ckanext-asc-csa

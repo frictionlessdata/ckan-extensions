@@ -1,0 +1,2265 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="description" content="To start working on the project clone the repository and enter its directory:">
+<meta name="keywords" content="contributing">
+<link rel="icon" href="assets/ckan.png">
+<title>Contributing | CKAN Extensions</title>
+<link rel="stylesheet" href="https://unpkg.com/@fortawesome/fontawesome-free@5.15.4/css/all.min.css">
+<link rel="stylesheet" href="https://unpkg.com/bootstrap@4.6.0/dist/css/bootstrap.min.css">
+<link rel="stylesheet" href="https://unpkg.com/prismjs@1.23.0/themes/prism.css">
+<style>
+
+/* Base */
+
+html {
+  font-family: sans-serif;
+  line-height: 1.15;
+  -webkit-text-size-adjust: 100%;
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+}
+
+body {
+  margin: 0;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", "Liberation Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 1.5;
+  color: #222;
+  text-align: left;
+  background-color: #fff;
+}
+
+*,
+::after,
+::before {
+	box-sizing: border-box;
+}
+
+ul,
+ol {
+	margin-top: 0;
+	margin-bottom: 1rem;
+}
+
+a {
+	color: #007bff;
+	text-decoration: none;
+	background-color: transparent;
+}
+
+a:hover {
+	color: #0056b3;
+	text-decoration: underline;
+}
+
+hr {
+  box-sizing: content-box;
+  height: 0;
+  overflow: visible;
+}
+
+p {
+  margin-top: 0;
+  margin-bottom: 1rem;
+}
+
+/* Main */
+
+#livemark-main {
+  padding: 24px 20px;
+  min-height: 100vh;
+}
+
+#livemark-main h1 {
+  margin-top: 4px !important;
+  padding-bottom: 12px !important;
+}
+
+#livemark-main h1 a.heading,
+#livemark-main h2 a.heading,
+#livemark-main h3 a.heading,
+#livemark-main h4 a.heading,
+#livemark-main h5 a.heading,
+#livemark-main h6 a.heading {
+  display: none;
+}
+
+#livemark-main h2:hover a.heading,
+#livemark-main h3:hover a.heading,
+#livemark-main h4:hover a.heading,
+#livemark-main h5:hover a.heading,
+#livemark-main h6:hover a.heading {
+  display: inline;
+  margin-left: 8px;
+  color: #aaa;
+  font-weight: normal;
+  text-decoration: none;
+}
+
+#livemark-main h2 a.heading:hover,
+#livemark-main h3 a.heading:hover,
+#livemark-main h4 a.heading:hover,
+#livemark-main h5 a.heading:hover,
+#livemark-main h6 a.heading:hover {
+  text-decoration: underline;
+}
+
+@media only screen and (min-width: 768px) {
+  #livemark-main {
+    margin-left: 300px;
+    border-left: dashed 1px #ccc;
+  }
+}
+
+@media only screen and (min-width: 992px) {
+  #livemark-main {
+    margin-right: 300px;
+    border-right: dashed 1px #ccc;
+  }
+}
+
+#livemark-main .octicon {
+  display: inline-block;
+  fill: currentColor;
+  vertical-align: text-bottom;
+}
+
+#livemark-main .anchor {
+  float: left;
+  line-height: 1;
+  margin-left: -20px;
+  padding-right: 4px;
+}
+
+#livemark-main .anchor:focus {
+  outline: none;
+}
+
+#livemark-main h1 .octicon-link,
+#livemark-main h2 .octicon-link,
+#livemark-main h3 .octicon-link,
+#livemark-main h4 .octicon-link,
+#livemark-main h5 .octicon-link,
+#livemark-main h6 .octicon-link {
+  color: #1b1f23;
+  vertical-align: middle;
+  visibility: hidden;
+}
+
+#livemark-main h1:hover .anchor,
+#livemark-main h2:hover .anchor,
+#livemark-main h3:hover .anchor,
+#livemark-main h4:hover .anchor,
+#livemark-main h5:hover .anchor,
+#livemark-main h6:hover .anchor {
+  text-decoration: none;
+}
+
+#livemark-main h1:hover .anchor .octicon-link,
+#livemark-main h2:hover .anchor .octicon-link,
+#livemark-main h3:hover .anchor .octicon-link,
+#livemark-main h4:hover .anchor .octicon-link,
+#livemark-main h5:hover .anchor .octicon-link,
+#livemark-main h6:hover .anchor .octicon-link {
+  visibility: visible;
+}
+
+#livemark-main h1:hover .anchor .octicon-link:before,
+#livemark-main h2:hover .anchor .octicon-link:before,
+#livemark-main h3:hover .anchor .octicon-link:before,
+#livemark-main h4:hover .anchor .octicon-link:before,
+#livemark-main h5:hover .anchor .octicon-link:before,
+#livemark-main h6:hover .anchor .octicon-link:before {
+  width: 16px;
+  height: 16px;
+  content: ' ';
+  display: inline-block;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16' version='1.1' width='16' height='16' aria-hidden='true'%3E%3Cpath fill-rule='evenodd' d='M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z'%3E%3C/path%3E%3C/svg%3E");
+}
+
+#livemark-main {
+  -ms-text-size-adjust: 100%;
+  -webkit-text-size-adjust: 100%;
+  line-height: 1.5;
+  color: #222;
+  font-family: system-ui, -apple-system,BlinkMacSystemFont,Segoe UI,Helvetica,Arial,sans-serif,Apple Color Emoji,Segoe UI Emoji;
+  line-height: 1.5;
+  word-wrap: break-word;
+}
+
+#livemark-main details {
+  display: block;
+}
+
+#livemark-main summary {
+  display: list-item;
+}
+
+#livemark-main a {
+  background-color: initial;
+}
+
+#livemark-main a:active,
+#livemark-main a:hover {
+  outline-width: 0;
+}
+
+#livemark-main strong {
+  font-weight: inherit;
+  font-weight: bolder;
+}
+
+#livemark-main h1 {
+  font-size: 2em;
+  margin: .67em 0;
+}
+
+#livemark-main img {
+  border-style: none;
+}
+
+#livemark-main code,
+#livemark-main kbd,
+#livemark-main pre {
+  font-family: monospace,monospace;
+  font-size: 1em;
+}
+
+#livemark-main hr {
+  box-sizing: initial;
+  height: 0;
+  overflow: visible;
+}
+
+#livemark-main input {
+  font: inherit;
+  margin: 0;
+}
+
+#livemark-main input {
+  overflow: visible;
+}
+
+#livemark-main [type=checkbox] {
+  box-sizing: border-box;
+  padding: 0;
+}
+
+#livemark-main * {
+  box-sizing: border-box;
+}
+
+#livemark-main input {
+  font-family: inherit;
+  font-size: inherit;
+  line-height: inherit;
+}
+
+#livemark-main a {
+  color: #0366d6;
+  text-decoration: none;
+}
+
+#livemark-main a:hover {
+  text-decoration: underline;
+}
+
+#livemark-main strong {
+  font-weight: 600;
+}
+
+#livemark-main hr {
+  height: 0;
+  margin: 15px 0;
+  overflow: hidden;
+  background: transparent;
+  border: 0;
+  border-bottom: 1px solid #dfe2e5;
+}
+
+#livemark-main hr:after,
+#livemark-main hr:before {
+  display: table;
+  content: "";
+}
+
+#livemark-main hr:after {
+  clear: both;
+}
+
+/* NOTE: doesn't work with handsontable */
+/* #livemark-main table { */
+  /* border-spacing: 0; */
+  /* border-collapse: collapse; */
+/* } */
+
+#livemark-main td,
+#livemark-main th {
+  padding: 0;
+}
+
+#livemark-main details summary {
+  cursor: pointer;
+}
+
+#livemark-main kbd {
+  display: inline-block;
+  padding: 3px 5px;
+  font: 11px SFMono-Regular,Consolas,Liberation Mono,Menlo,monospace;
+  line-height: 10px;
+  color: #444d56;
+  vertical-align: middle;
+  background-color: #fafbfc;
+  border: 1px solid #d1d5da;
+  border-radius: 3px;
+  box-shadow: inset 0 -1px 0 #d1d5da;
+}
+
+#livemark-main h1,
+#livemark-main h2,
+#livemark-main h3,
+#livemark-main h4,
+#livemark-main h5,
+#livemark-main h6 {
+  margin-top: 0;
+  margin-bottom: 0;
+}
+
+#livemark-main h1 {
+  font-size: 32px;
+}
+
+#livemark-main h1,
+#livemark-main h2 {
+  font-weight: 600;
+}
+
+#livemark-main h2 {
+  font-size: 24px;
+}
+
+#livemark-main h3 {
+  font-size: 20px;
+}
+
+#livemark-main h3,
+#livemark-main h4 {
+  font-weight: 600;
+}
+
+#livemark-main h4 {
+  font-size: 16px;
+}
+
+#livemark-main h5 {
+  font-size: 14px;
+}
+
+#livemark-main h5,
+#livemark-main h6 {
+  font-weight: 600;
+}
+
+#livemark-main h6 {
+  font-size: 12px;
+}
+
+#livemark-main p {
+  margin-top: 0;
+  margin-bottom: 10px;
+}
+
+#livemark-main blockquote {
+  margin: 0;
+}
+
+#livemark-main ol,
+#livemark-main ul {
+  padding-left: 0;
+  margin-top: 0;
+  margin-bottom: 0;
+}
+
+#livemark-main ol ol,
+#livemark-main ul ol {
+  list-style-type: lower-roman;
+}
+
+#livemark-main ol ol ol,
+#livemark-main ol ul ol,
+#livemark-main ul ol ol,
+#livemark-main ul ul ol {
+  list-style-type: lower-alpha;
+}
+
+#livemark-main dd {
+  margin-left: 0;
+}
+
+#livemark-main code,
+#livemark-main pre {
+  font-family: SFMono-Regular,Consolas,Liberation Mono,Menlo,monospace;
+  font-size: 12px;
+}
+
+#livemark-main pre {
+  margin-top: 0;
+  margin-bottom: 0;
+}
+
+#livemark-main input::-webkit-inner-spin-button,
+#livemark-main input::-webkit-outer-spin-button {
+  margin: 0;
+  -webkit-appearance: none;
+  appearance: none;
+}
+
+#livemark-main :checked+.radio-label {
+  position: relative;
+  z-index: 1;
+  border-color: #0366d6;
+}
+
+#livemark-main .border {
+  border: 1px solid #e1e4e8!important;
+}
+
+#livemark-main .border-0 {
+  border: 0!important;
+}
+
+#livemark-main .border-bottom {
+  border-bottom: 1px solid #e1e4e8!important;
+}
+
+#livemark-main .rounded-1 {
+  border-radius: 3px!important;
+}
+
+#livemark-main .bg-white {
+  background-color: #fff!important;
+}
+
+#livemark-main .bg-gray-light {
+  background-color: #fafbfc!important;
+}
+
+#livemark-main .text-gray-light {
+  color: #666!important;
+}
+
+#livemark-main .mb-0 {
+  margin-bottom: 0!important;
+}
+
+#livemark-main .my-2 {
+  margin-top: 8px!important;
+  margin-bottom: 8px!important;
+}
+
+#livemark-main .pl-0 {
+  padding-left: 0!important;
+}
+
+#livemark-main .py-0 {
+  padding-top: 0!important;
+  padding-bottom: 0!important;
+}
+
+#livemark-main .pl-1 {
+  padding-left: 4px!important;
+}
+
+#livemark-main .pl-2 {
+  padding-left: 8px!important;
+}
+
+#livemark-main .py-2 {
+  padding-top: 8px!important;
+  padding-bottom: 8px!important;
+}
+
+#livemark-main .pl-3,
+#livemark-main .px-3 {
+  padding-left: 16px!important;
+}
+
+#livemark-main .px-3 {
+  padding-right: 16px!important;
+}
+
+#livemark-main .pl-4 {
+  padding-left: 24px!important;
+}
+
+#livemark-main .pl-5 {
+  padding-left: 32px!important;
+}
+
+#livemark-main .pl-6 {
+  padding-left: 40px!important;
+}
+
+#livemark-main .f6 {
+  font-size: 12px!important;
+}
+
+#livemark-main .lh-condensed {
+  line-height: 1.25!important;
+}
+
+#livemark-main .text-bold {
+  font-weight: 600!important;
+}
+
+#livemark-main .pl-c {
+  color: #666;
+}
+
+#livemark-main .pl-c1,
+#livemark-main .pl-s .pl-v {
+  color: #005cc5;
+}
+
+#livemark-main .pl-e,
+#livemark-main .pl-en {
+  color: #6f42c1;
+}
+
+#livemark-main .pl-s .pl-s1,
+#livemark-main .pl-smi {
+  color: #222;
+}
+
+#livemark-main .pl-ent {
+  color: #22863a;
+}
+
+#livemark-main .pl-k {
+  color: #d73a49;
+}
+
+#livemark-main .pl-pds,
+#livemark-main .pl-s,
+#livemark-main .pl-s .pl-pse .pl-s1,
+#livemark-main .pl-sr,
+#livemark-main .pl-sr .pl-cce,
+#livemark-main .pl-sr .pl-sra,
+#livemark-main .pl-sr .pl-sre {
+  color: #032f62;
+}
+
+#livemark-main .pl-smw,
+#livemark-main .pl-v {
+  color: #e36209;
+}
+
+#livemark-main .pl-bu {
+  color: #b31d28;
+}
+
+#livemark-main .pl-ii {
+  color: #fafbfc;
+  background-color: #b31d28;
+}
+
+#livemark-main .pl-c2 {
+  color: #fafbfc;
+  background-color: #d73a49;
+}
+
+#livemark-main .pl-c2:before {
+  content: "^M";
+}
+
+#livemark-main .pl-sr .pl-cce {
+  font-weight: 700;
+  color: #22863a;
+}
+
+#livemark-main .pl-ml {
+  color: #735c0f;
+}
+
+#livemark-main .pl-mh,
+#livemark-main .pl-mh .pl-en,
+#livemark-main .pl-ms {
+  font-weight: 700;
+  color: #005cc5;
+}
+
+#livemark-main .pl-mi {
+  font-style: italic;
+  color: #222;
+}
+
+#livemark-main .pl-mb {
+  font-weight: 700;
+  color: #222;
+}
+
+#livemark-main .pl-md {
+  color: #b31d28;
+  background-color: #ffeef0;
+}
+
+#livemark-main .pl-mi1 {
+  color: #22863a;
+  background-color: #f0fff4;
+}
+
+#livemark-main .pl-mc {
+  color: #e36209;
+  background-color: #ffebda;
+}
+
+#livemark-main .pl-mi2 {
+  color: #f6f8fa;
+  background-color: #005cc5;
+}
+
+#livemark-main .pl-mdr {
+  font-weight: 700;
+  color: #6f42c1;
+}
+
+#livemark-main .pl-ba {
+  color: #586069;
+}
+
+#livemark-main .pl-sg {
+  color: #959da5;
+}
+
+#livemark-main .pl-corl {
+  text-decoration: underline;
+  color: #032f62;
+}
+
+#livemark-main .mb-0 {
+  margin-bottom: 0!important;
+}
+
+#livemark-main .my-2 {
+  margin-bottom: 8px!important;
+}
+
+#livemark-main .my-2 {
+  margin-top: 8px!important;
+}
+
+#livemark-main .pl-0 {
+  padding-left: 0!important;
+}
+
+#livemark-main .py-0 {
+  padding-top: 0!important;
+  padding-bottom: 0!important;
+}
+
+#livemark-main .pl-1 {
+  padding-left: 4px!important;
+}
+
+#livemark-main .pl-2 {
+  padding-left: 8px!important;
+}
+
+#livemark-main .py-2 {
+  padding-top: 8px!important;
+  padding-bottom: 8px!important;
+}
+
+#livemark-main .pl-3 {
+  padding-left: 16px!important;
+}
+
+#livemark-main .pl-4 {
+  padding-left: 24px!important;
+}
+
+#livemark-main .pl-5 {
+  padding-left: 32px!important;
+}
+
+#livemark-main .pl-6 {
+  padding-left: 40px!important;
+}
+
+#livemark-main .pl-7 {
+  padding-left: 48px!important;
+}
+
+#livemark-main .pl-8 {
+  padding-left: 64px!important;
+}
+
+#livemark-main .pl-9 {
+  padding-left: 80px!important;
+}
+
+#livemark-main .pl-10 {
+  padding-left: 96px!important;
+}
+
+#livemark-main .pl-11 {
+  padding-left: 112px!important;
+}
+
+#livemark-main .pl-12 {
+  padding-left: 128px!important;
+}
+
+#livemark-main hr {
+  border-bottom-color: #eee;
+}
+
+#livemark-main kbd {
+  display: inline-block;
+  padding: 3px 5px;
+  font: 11px SFMono-Regular,Consolas,Liberation Mono,Menlo,monospace;
+  line-height: 10px;
+  color: #444d56;
+  vertical-align: middle;
+  background-color: #fafbfc;
+  border: 1px solid #d1d5da;
+  border-radius: 3px;
+  box-shadow: inset 0 -1px 0 #d1d5da;
+}
+
+#livemark-main:after,
+#livemark-main:before {
+  display: table;
+  content: "";
+}
+
+#livemark-main:after {
+  clear: both;
+}
+
+#livemark-main a:not([href]) {
+  color: inherit;
+  text-decoration: none;
+}
+
+#livemark-main blockquote,
+#livemark-main details,
+#livemark-main dl,
+#livemark-main ol,
+#livemark-main p,
+#livemark-main pre,
+/* NOTE: doesn't work with handsontable */
+/* #livemark-main table, */
+#livemark-main ul {
+  margin-top: 0;
+  margin-bottom: 16px;
+}
+
+#livemark-main hr {
+  height: .25em;
+  padding: 0;
+  margin: 24px 0;
+  background-color: #e1e4e8;
+  border: 0;
+}
+
+#livemark-main blockquote {
+  padding: 0 1em;
+  color: #666;
+  border-left: .25em solid #dfe2e5;
+}
+
+#livemark-main blockquote>:first-child {
+  margin-top: 0;
+}
+
+#livemark-main blockquote>:last-child {
+  margin-bottom: 0;
+}
+
+#livemark-main h1,
+#livemark-main h2,
+#livemark-main h3,
+#livemark-main h4,
+#livemark-main h5,
+#livemark-main h6 {
+  margin-top: 24px;
+  margin-bottom: 16px;
+  font-weight: 600;
+  line-height: 1.25;
+}
+
+#livemark-main h1 {
+  font-size: 2em;
+}
+
+#livemark-main h1,
+#livemark-main h2 {
+  padding-bottom: .3em;
+  border-bottom: 1px solid #eaecef;
+}
+
+#livemark-main h2 {
+  font-size: 1.5em;
+}
+
+#livemark-main h3 {
+  font-size: 1.25em;
+}
+
+#livemark-main h4 {
+  font-size: 1em;
+}
+
+#livemark-main h5 {
+  font-size: .875em;
+}
+
+#livemark-main h6 {
+  font-size: .85em;
+  color: #666;
+}
+
+#livemark-main ol,
+#livemark-main ul {
+  padding-left: 2em;
+}
+
+#livemark-main ol ol,
+#livemark-main ol ul,
+#livemark-main ul ol,
+#livemark-main ul ul {
+  margin-top: 0;
+  margin-bottom: 0;
+}
+
+#livemark-main li {
+  word-wrap: break-all;
+}
+
+#livemark-main li>p {
+  margin-top: 16px;
+}
+
+#livemark-main li+li {
+  margin-top: .25em;
+}
+
+#livemark-main dl {
+  padding: 0;
+}
+
+#livemark-main dl dt {
+  padding: 0;
+  margin-top: 16px;
+  font-size: 1em;
+  font-style: italic;
+  font-weight: 600;
+}
+
+#livemark-main dl dd {
+  padding: 0 16px;
+  margin-bottom: 16px;
+}
+
+/* NOTE: doesn't work with handsontable */
+/* #livemark-main table { */
+  /* display: block; */
+  /* width: 100%; */
+  /* overflow: auto; */
+/* } */
+
+/* #livemark-main table th { */
+  /* font-weight: 600; */
+/* } */
+
+/* #livemark-main table td, */
+/* #livemark-main table th { */
+  /* padding: 6px 13px; */
+  /* border: 1px solid #dfe2e5; */
+/* } */
+
+/* #livemark-main table tr { */
+  /* background-color: #fff; */
+  /* border-top: 1px solid #c6cbd1; */
+/* } */
+
+/* #livemark-main table tr:nth-child(2n) { */
+  /* background-color: #f6f8fa; */
+/* } */
+
+#livemark-main img {
+  max-width: 100%;
+  box-sizing: initial;
+  background-color: #fff;
+}
+
+#livemark-main img[align=right] {
+  padding-left: 20px;
+}
+
+#livemark-main img[align=left] {
+  padding-right: 20px;
+}
+
+#livemark-main code {
+  padding: .2em .4em;
+  margin: 0;
+  font-size: 85%;
+  background-color: rgba(27,31,35,.05);
+  border-radius: 3px;
+}
+
+#livemark-main pre {
+  word-wrap: normal;
+}
+
+#livemark-main pre>code {
+  padding: 0;
+  margin: 0;
+  font-size: 100%;
+  word-break: normal;
+  white-space: pre;
+  background: transparent;
+  border: 0;
+}
+
+#livemark-main .highlight {
+  margin-bottom: 16px;
+}
+
+#livemark-main .highlight pre {
+  margin-bottom: 0;
+  word-break: normal;
+}
+
+#livemark-main .highlight pre,
+#livemark-main pre {
+  padding: 16px;
+  overflow: auto;
+  font-size: 85%;
+  line-height: 1.45;
+  background-color: #f6f8fa;
+  border-radius: 3px;
+}
+
+#livemark-main pre code {
+  display: inline;
+  max-width: auto;
+  padding: 0;
+  margin: 0;
+  overflow: visible;
+  line-height: inherit;
+  word-wrap: normal;
+  background-color: initial;
+  border: 0;
+}
+
+#livemark-main .commit-tease-sha {
+  display: inline-block;
+  font-family: SFMono-Regular,Consolas,Liberation Mono,Menlo,monospace;
+  font-size: 90%;
+  color: #444d56;
+}
+
+#livemark-main .full-commit .btn-outline:not(:disabled):hover {
+  color: #005cc5;
+  border-color: #005cc5;
+}
+
+#livemark-main .blob-wrapper {
+  overflow-x: auto;
+  overflow-y: hidden;
+}
+
+#livemark-main .blob-wrapper-embedded {
+  max-height: 240px;
+  overflow-y: auto;
+}
+
+#livemark-main .blob-num {
+  width: 1%;
+  min-width: 50px;
+  padding-right: 10px;
+  padding-left: 10px;
+  font-family: SFMono-Regular,Consolas,Liberation Mono,Menlo,monospace;
+  font-size: 12px;
+  line-height: 20px;
+  color: rgba(27,31,35,.3);
+  text-align: right;
+  white-space: nowrap;
+  vertical-align: top;
+  cursor: pointer;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+#livemark-main .blob-num:hover {
+  color: rgba(27,31,35,.6);
+}
+
+#livemark-main .blob-num:before {
+  content: attr(data-line-number);
+}
+
+#livemark-main .blob-code {
+  position: relative;
+  padding-right: 10px;
+  padding-left: 10px;
+  line-height: 20px;
+  vertical-align: top;
+}
+
+#livemark-main .blob-code-inner {
+  overflow: visible;
+  font-family: SFMono-Regular,Consolas,Liberation Mono,Menlo,monospace;
+  font-size: 12px;
+  color: #222;
+  word-wrap: normal;
+  white-space: pre;
+}
+
+#livemark-main .pl-token.active,
+#livemark-main .pl-token:hover {
+  cursor: pointer;
+  background: #ffea7f;
+}
+
+#livemark-main .tab-size[data-tab-size="1"] {
+  -moz-tab-size: 1;
+  tab-size: 1;
+}
+
+#livemark-main .tab-size[data-tab-size="2"] {
+  -moz-tab-size: 2;
+  tab-size: 2;
+}
+
+#livemark-main .tab-size[data-tab-size="3"] {
+  -moz-tab-size: 3;
+  tab-size: 3;
+}
+
+#livemark-main .tab-size[data-tab-size="4"] {
+  -moz-tab-size: 4;
+  tab-size: 4;
+}
+
+#livemark-main .tab-size[data-tab-size="5"] {
+  -moz-tab-size: 5;
+  tab-size: 5;
+}
+
+#livemark-main .tab-size[data-tab-size="6"] {
+  -moz-tab-size: 6;
+  tab-size: 6;
+}
+
+#livemark-main .tab-size[data-tab-size="7"] {
+  -moz-tab-size: 7;
+  tab-size: 7;
+}
+
+#livemark-main .tab-size[data-tab-size="8"] {
+  -moz-tab-size: 8;
+  tab-size: 8;
+}
+
+#livemark-main .tab-size[data-tab-size="9"] {
+  -moz-tab-size: 9;
+  tab-size: 9;
+}
+
+#livemark-main .tab-size[data-tab-size="10"] {
+  -moz-tab-size: 10;
+  tab-size: 10;
+}
+
+#livemark-main .tab-size[data-tab-size="11"] {
+  -moz-tab-size: 11;
+  tab-size: 11;
+}
+
+#livemark-main .tab-size[data-tab-size="12"] {
+  -moz-tab-size: 12;
+  tab-size: 12;
+}
+
+#livemark-main .task-list-item {
+  list-style-type: none;
+}
+
+#livemark-main .task-list-item+.task-list-item {
+  margin-top: 3px;
+}
+
+#livemark-main .task-list-item input {
+  margin: 0 .2em .25em -1.6em;
+  vertical-align: middle;
+}
+
+/* Left */
+
+#livemark-left {
+  visibility: hidden;
+  position: fixed;
+  width: 300px;
+  padding: 10px 40px;
+  padding-bottom: 100px;
+  left: 0px;
+  top: 25px;
+  font-size: 125%;
+  height: 100vh;
+  overflow-y: auto;
+  scrollbar-width: none;  /* Firefox */
+  -ms-overflow-style: none;  /* Internet Explorer 10+ */
+}
+
+/* NOTE: we need to move it to DisplayPlugin (currently unsetting doesn't work) */
+body:not(.with-readability) #livemark-left::-webkit-scrollbar {
+  display: none; /* Chrome; Safari */
+}
+
+#livemark-left > div:not(:last-child) {
+  border-bottom: 1px solid #eaecef;
+  padding-bottom: 15px;
+  margin-bottom: 15px;
+}
+
+@media only screen and (min-width: 768px) {
+  #livemark-left {
+    visibility: visible;
+  }
+}
+
+/* Right */
+
+#livemark-right {
+  visibility: hidden;
+  position: fixed;
+  width: 300px;
+  padding: 10px 40px;
+  padding-bottom: 100px;
+  right: 0px;
+  top: 25px;
+  font-size: 125%;
+  height: 100vh;
+  overflow-y: auto;
+  scrollbar-width: none;  /* Firefox */
+  -ms-overflow-style: none;  /* Internet Explorer 10+ */
+}
+
+/* NOTE: we need to move it to DisplayPlugin (currently unsetting doesn't work) */
+body:not(.with-readability) #livemark-right::-webkit-scrollbar {
+  display: none; /* Chrome; Safari */
+}
+
+#livemark-right > div:not(:last-child) {
+  border-bottom: 1px solid #eaecef;
+  padding-bottom: 15px;
+  margin-bottom: 15px;
+}
+
+@media only screen and (min-width: 992px) {
+  #livemark-right {
+    visibility: visible;
+  }
+}
+
+</style>
+<style>
+
+.item {
+  position: relative;
+  border: solid 1px #eee;
+  border-radius: 10px;
+  margin-bottom: 20px;
+  padding: 0 20px;
+  background-color: #EEE8D5;
+  display: flex;
+  align-items: center;
+}
+
+.item:nth-child(odd) {
+  background-color: #EEE8C8;
+}
+
+.item-content {
+  width: 100%;
+  border-right: dashed 1px #ccc;
+}
+
+.item-content-link {
+  color: grey !important;
+}
+
+.item-stars {
+  font-size: 24px;
+  padding-left: 20px;
+}
+
+.item-stars-count {
+  font-size: 30px;
+}
+
+</style>
+<style>
+
+#livemark-brand {
+  color: #888;
+}
+
+#livemark-brand ul {
+  overflow: hidden;
+  position: relative;
+  padding-left: 0;
+  margin: 0;
+}
+
+#livemark-brand li {
+  list-style: none;
+}
+
+#livemark-brand a {
+  display: inline-block;
+  color: currentColor;
+  position: relative;
+  width: 100%;
+  line-height: 100%;
+  padding-top: 5px;
+  padding-bottom: 5px;
+}
+
+#livemark-brand a.active {
+  font-weight: 700;
+}
+
+#livemark-brand a:hover {
+  color: #80b2e6;
+}
+
+</style>
+<style>
+
+#livemark-pages {
+  color: #888;
+}
+
+#livemark-pages ul {
+  overflow: hidden;
+  position: relative;
+  padding-left: 0;
+  margin: 0;
+}
+
+#livemark-pages ul.secondary {
+  margin-left: 20px;
+  display: none;
+}
+
+#livemark-pages li.active ul.secondary {
+  display: block;
+}
+
+#livemark-pages li {
+  list-style: none;
+}
+
+#livemark-pages a {
+  display: inline-block;
+  color: currentColor;
+  position: relative;
+  width: 100%;
+  line-height: 100%;
+  padding-top: 5px;
+  padding-bottom: 5px;
+}
+
+#livemark-pages li.active > a {
+  font-weight: 700;
+}
+
+#livemark-pages li.group.active > a {
+  font-weight: normal;
+}
+
+#livemark-pages li.group a.primary::after {
+  content: "\f054";
+  font-size: 16px;
+  font-family: "Font Awesome 5 Free";
+  font-weight: 900;
+  position: absolute;
+  top: 2px;
+  right: 0px;
+}
+
+#livemark-pages li.group.active a.primary::after {
+  content: "\f078";
+}
+
+#livemark-pages a:hover {
+  color: #80b2e6;
+}
+
+</style>
+<style>
+
+.livemark-reference {
+  display: block;
+  /* font-family: ui-monospace, Menlo, Monaco, "Cascadia Mono", "Segoe UI Mono", "Roboto Mono", "Oxygen Mono", "Ubuntu Monospace", "Source Code Pro", "Fira Mono", "Droid Sans Mono", "Courier New", monospace;; */
+}
+
+</style>
+<style>
+
+#livemark-topics {
+  color: #888;
+}
+
+#livemark-topics .toc>.toc-list {
+  overflow: hidden;
+  position: relative;
+}
+
+#livemark-topics .toc>.toc-list li {
+  list-style: none;
+}
+
+#livemark-topics .toc-list {
+  padding-left: 0;
+  margin: 0;
+}
+
+#livemark-topics a.toc-link {
+  color: currentColor;
+}
+
+#livemark-topics a.toc-link:hover {
+  color: #80b2e6;
+}
+
+#livemark-topics .is-active-link {
+  font-weight: 700;
+}
+
+#livemark-topics ul.secondary {
+  margin-left: 20px;
+  display: none;
+}
+
+#livemark-topics li.is-active-li ul.secondary {
+  display: block;
+}
+
+#livemark-topics li.group a.primary::after {
+  content: "\f054";
+  font-size: 16px;
+  font-family: "Font Awesome 5 Free";
+  font-weight: 900;
+  position: absolute;
+  top: 2px;
+  right: 0px;
+}
+
+#livemark-topics li.group.is-active-li a.primary::after {
+  content: "\f078";
+}
+
+#livemark-topics a {
+  display: inline-block;
+  color: currentColor;
+  position: relative;
+  width: 100%;
+  line-height: 100%;
+  padding-top: 5px;
+  padding-bottom: 5px;
+}
+
+#livemark-topics a:hover {
+  color: #80b2e6;
+}
+
+</style>
+<style>
+
+#livemark-notes {
+  color: #aaa;
+  text-align: right;
+  font-size: 14px;
+  float: right;
+  visibility: hidden;
+}
+
+@media (min-width: 768px) {
+  #livemark-notes {
+    visibility: visible;
+  }
+}
+
+#livemark-notes a {
+  color: inherit;
+}
+
+#livemark-notes a:hover {
+  color: #80b2e6;
+}
+
+#livemark-notes a[target="_blank"]:after {
+  content: "\f35d";
+  font-family: "Font Awesome 5 Free";
+  font-weight: 900;
+  vertical-align: text-top;
+  text-decoration: none;
+  display: inline-block;
+  color: #ccc;
+  font-size: 10px;
+  margin-left: -1px;
+}
+
+#livemark-notes a[target="_blank"]:hover:after {
+  color: #80b2e6;
+}
+
+</style>
+<style>
+
+#livemark-signs {
+  color: #888;
+  border-top: 1px solid #eaecef;
+  margin-top: 24px;
+  padding-top: 20px;
+  height: 50px;
+}
+
+#livemark-signs .next {
+  float: right;
+}
+
+#livemark-signs a {
+  font-size: 20px;
+  color: currentColor;
+}
+
+#livemark-signs a:hover {
+  color: #80b2e6;
+}
+
+</style>
+<style>
+
+#livemark-rating {
+  height: 46px;
+}
+
+#livemark-rating iframe {
+  margin-top: -5px;
+  border: none;
+  opacity: 0.5;
+}
+
+</style>
+<style>
+
+#livemark-about {
+  color: #888;
+}
+
+</style>
+<style>
+
+#livemark-links {
+  color: #888;
+}
+
+#livemark-links ul {
+  overflow: hidden;
+  position: relative;
+  padding-left: 0;
+  margin: 0;
+}
+
+#livemark-links li {
+  list-style: none;
+}
+
+#livemark-links a {
+  display: inline-block;
+  color: currentColor;
+  position: relative;
+  width: 100%;
+  line-height: 100%;
+  padding-top: 5px;
+  padding-bottom: 5px;
+}
+
+#livemark-links a:hover {
+  color: #80b2e6;
+}
+
+#livemark-links a[target="_blank"]:after {
+  content: "\f35d";
+  font-family: "Font Awesome 5 Free";
+  font-weight: 900;
+  vertical-align: text-top;
+  text-decoration: none;
+  display: inline-block;
+  color: #aaa;
+  font-size: 12px;
+  margin-left: -2px;
+}
+
+#livemark-links a[target="_blank"]:hover:after {
+  color: #80b2e6;
+}
+
+</style>
+<style>
+
+.livemark-audio {
+  padding-bottom: 10px;
+}
+
+</style>
+<style>
+
+.livemark-blog-item {
+  margin-bottom: 16px;
+  text-align: justify;
+}
+
+.livemark-blog-item h2 a:not(.heading) {
+  color: #222 !important;
+}
+
+</style>
+<style>
+
+#livemark-cards .modal-lg {
+    max-width: 1000px;
+}
+
+</style>
+<style>
+
+#livemark-display {
+  display: flex;
+  position: fixed;
+  visibility: hidden;
+  justify-content: space-between;
+  font-size: 16px;
+  color: #888;
+  width: 240px;
+  bottom: 20px;
+  right: 30px;
+}
+
+@media only screen and (min-width: 992px) {
+  #livemark-display {
+    visibility: visible;
+  }
+}
+
+#livemark-display .control {
+  cursor: pointer;
+  background-color:#fff;
+  box-shadow: 0px 7px 10px #eee;
+  border-radius: 50%;
+  border: solid 1px #ddd;
+  z-index: 100;
+}
+
+#livemark-display .control .fa {
+  display: inline-block !important;
+  opacity: 1 !important;
+  padding: 15px;
+}
+
+.with-readability {
+  font-size: 20px;
+}
+
+.with-readability #livemark-main {
+  color: #000;
+}
+
+.with-readability #livemark-left > *,
+.with-readability #livemark-right > * {
+  color: #444;
+}
+
+.with-readability #livemark-left,
+.with-readability #livemark-right {
+  scrollbar-width: unset;  /* Firefox */
+  -ms-overflow-style: unset;  /* Internet Explorer 10+ */
+}
+
+/* NOTE: temporarily implemented in HtmlPlugin
+/* .with-readability #livemark-left::-webkit-scrollbar, */
+/* .with-readability #livemark-right::-webkit-scrollbar { */
+  /* display: unset !important; [> Chrome; Safari <] */
+/* } */
+
+</style>
+<style>
+
+.livemark-image {
+  padding-bottom: 10px;
+}
+
+</style>
+<style>
+
+.livemark-infinity {
+  display: none;
+}
+
+</style>
+<style>
+
+#livemark-mobile {
+  position: absolute;
+  visibility: hidden;
+  z-index: 10000;
+  /* NOTE: We can't use "right" because of Mobile Chrome and #34 */
+  left: calc(100vw - 60px);
+  top: 24px;
+}
+
+#livemark-mobile .stack {
+  margin-top: 15px;
+  display: block;
+  cursor: pointer;
+}
+
+#livemark-mobile .bar {
+  display: block;
+  width: 25px;
+  height: 3px;
+  margin: 5px auto;
+  -webkit-transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out;
+  background-color: #aaa;
+}
+
+@media only screen and (max-width: 768px) {
+  #livemark-mobile {
+    visibility: visible;
+  }
+
+  #livemark-mobile.active {
+    position: fixed;
+  }
+
+  #livemark-mobile.active .bar:nth-child(2) {
+    opacity: 0;
+  }
+
+  #livemark-mobile.active .bar:nth-child(1) {
+    transform: translateY(8px) rotate(45deg);
+  }
+
+  #livemark-mobile.active .bar:nth-child(3) {
+    transform: translateY(-8px) rotate(-45deg);
+  }
+
+  #livemark-left {
+      position: fixed;
+      top: 0;
+      left: -100vw;
+      padding-top: 35px;
+      background-color: #fff;
+      width: 100vw;
+      border-radius: 10px;
+      text-align: center;
+      transition: 0.3s;
+      box-shadow: 0 10px 27px rgba(0, 0, 0, 0.05);
+      visibility: visible;
+      z-index: 1000;
+  }
+
+  #livemark-left.active {
+    left: 0;
+  }
+}
+
+</style>
+<link rel="stylesheet" href="https://unpkg.com/paginationjs@2.1.5/dist/pagination.css">
+<style>
+
+.livemark-pagination {
+  display: none;
+}
+
+</style>
+<style>
+
+.livemark-remark {
+  display: block;
+}
+
+</style>
+<style>
+
+#livemark-search {
+  position: fixed;
+  left: 30px;
+  width: 240px;
+  bottom: 20px;
+  z-index:100;
+  visibility: hidden;
+}
+
+@media only screen and (min-width: 992px) {
+  #livemark-search {
+    visibility: visible;
+  }
+}
+
+#livemark-search-input {
+  width: 100%;
+  outline: none;
+  font-size: 20px;
+  padding: 7px 10px;
+  border-radius: 20px;
+  border: solid 1px #ddd;
+  box-shadow: 0px 7px 10px #eee;
+  color: #888;
+}
+
+#livemark-search-input::placeholder {
+  color: #888;
+}
+
+#livemark-search-input::-webkit-search-decoration,
+#livemark-search-input::-webkit-search-cancel-button,
+#livemark-search-input::-webkit-search-results-button,
+#livemark-search-input::-webkit-search-results-decoration {
+  -webkit-appearance:none;
+}
+
+#livemark-search-output {
+  visibility: hidden;
+  width: 100%;
+  font-size: 16px;
+  padding: 10px 10px;
+  border-radius: 20px;
+  border: solid 1px #ddd;
+  box-shadow: 0px 7px 10px #eee;
+  background: white;
+  margin-bottom: 10px;
+}
+
+#livemark-search-output ul {
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
+}
+
+#livemark-search-output li.active {
+  font-size: 20px;
+  font-weight: bold;
+}
+
+#livemark-search-output a {
+  color: #5CC820;
+  text-decoration: underline;
+}
+
+.livemark-search-found {
+  background-color: #5CC820;
+  color: white;
+  font-weight: bold;
+  padding: 5px;
+  border-radius: 5px;
+}
+
+</style>
+<style>
+
+.livemark-video {
+  padding-bottom: 10px;
+}
+
+</style>
+</head>
+<body>
+<div id="livemark-left">
+
+<div id="livemark-brand">
+  <ul>
+    <li>
+      <a class="active" href="/">
+        CKAN Extensions
+      </a>
+    </li>
+  </ul>
+</div>
+
+<div id="livemark-pages">
+  <ul class="primary">
+        <li class="primary  ">
+      <a href="/index.html" class="primary">
+        CKAN Extensions
+      </a>
+          </li>
+        <li class="primary  ">
+      <a href="/data.html" class="primary">
+        Data Collection
+      </a>
+          </li>
+        <li class="primary  active">
+      <a href="/contrib.html" class="primary">
+        Contributing
+      </a>
+          </li>
+      </ul>
+</div>
+
+<div id="livemark-topics">
+  <div class="toc">
+  </div>
+</div>
+</div>
+<div id="livemark-main">
+<div id="livemark-notes">
+  Written in <a href="https://livemark.frictionlessdata.io" target="_blank"> Livemark </a><br>
+  (2021-09-27 17:26)
+</div>
+
+<h1>Contributing</h1>
+<p>To start working on the project clone the repository and enter its directory:</p>
+<pre><code class="language-bash">$ git clone git@github.com:frictionlessdata/ckan-extensions.git
+$ cd ckan-extensions
+</code></pre>
+<h2>Install</h2>
+<p>Run the following script to initiate a virtual environment and install the dependencies:</p>
+<pre><code class="language-bash">$ make install
+$ editor .env # add your Github Token
+</code></pre>
+<h2>Collect</h2>
+<p>To collect the data use the data collection script (run only if you want to update the data):</p>
+<pre><code class="language-bash">$ make collect
+</code></pre>
+<h2>Build</h2>
+<p>To build the project use one of these Livemark commands:</p>
+<pre><code class="language-bash">$ livemark start # to build and start a live-reload server
+$ livemark build # to build in non-interactive mode
+</code></pre>
+<h2>Deploy</h2>
+<p>The project is deployed automatically to Github Pages on every push to "main". It means that if one propose a change in a PR it will be deployed automatically after merging.</p>
+
+<div id="livemark-signs">
+  <div>
+            <div class="prev">
+      <a href="/data.html">
+        « Data Collection
+      </a>
+    </div>
+      </div>
+</div>
+</div>
+<div id="livemark-right">
+
+<div id="livemark-rating">
+  <iframe src="https://ghbtns.com/github-btn.html?user=frictionlessdata&amp;repo=ckan-extensions&amp;type=star&amp;count=true&amp;size=large" width="160px" height="30px" title="GitHub">
+  </iframe>
+</div>
+
+<div id="livemark-about">
+  <div>
+    A livemark listing CKAN extensions hosted on Github
+  </div>
+</div>
+
+<div id="livemark-links">
+  <ul>
+        <li>
+      <a href="https://github.com/frictionlessdata/ckan-extensions/issues" target="_blank">
+        Report
+      </a>
+    </li>
+        <li>
+      <a href="https://github.com/frictionlessdata/ckan-extensions/fork" target="_blank">
+        Fork
+      </a>
+    </li>
+        <li>
+      <a href="https://github.com/frictionlessdata/ckan-extensions/edit/main/contrib.md" target="_blank">
+        Edit
+      </a>
+    </li>
+      
+</ul></div>
+</div>
+<script src="https://unpkg.com/jquery@3.6.0/dist/jquery.min.js"></script>
+<script src="https://unpkg.com/popper.js@1.16.1/dist/umd/popper.min.js"></script>
+<script src="https://unpkg.com/bootstrap@4.6.0/dist/js/bootstrap.min.js"></script>
+<script src="https://unpkg.com/prismjs@1.23.0/components/prism-core.min.js"></script>
+<script src="https://unpkg.com/prismjs@1.23.0/plugins/autoloader/prism-autoloader.min.js"></script>
+<script>
+
+document.addEventListener("DOMContentLoaded", function () {
+  const content = document.querySelector("#livemark-main");
+  const headings = content.querySelectorAll("h1, h2, h3, h4, h5, h6, h7");
+  const headingMap = {};
+
+  // Add identifiers
+  Array.prototype.forEach.call(headings, function (heading) {
+    const id = heading.id
+      ? heading.id
+      : heading.textContent
+          .trim()
+          .toLowerCase()
+          .split(" ")
+          .join("-")
+          .replace(/[!@#$%^&*():]/gi, "")
+          .replace(/\//gi, "-");
+    headingMap[id] = !isNaN(headingMap[id]) ? ++headingMap[id] : 0;
+    if (headingMap[id]) {
+      heading.id = id + "-" + headingMap[id];
+    } else {
+      heading.id = id;
+    }
+  });
+
+  // Add links
+  Array.prototype.forEach.call(headings, function (heading) {
+    const link = document.createElement("a");
+    link.href = "#" + heading.id;
+    link.innerText = "#";
+    link.classList.add("heading");
+    heading.appendChild(link);
+  });
+});
+
+</script>
+<script>
+
+document.addEventListener("DOMContentLoaded", function () {
+  const groups = $("#livemark-pages li.group");
+  for (const group of groups) {
+    $(group)
+      .children("a")
+      .click((ev) => {
+        ev.preventDefault();
+        $(group).toggleClass("active");
+        // $(group).find(".fa").toggleClass("fa-chevron-right");
+        // $(group).find(".fa").toggleClass("fa-chevron-down");
+      });
+  }
+});
+
+</script>
+<script src="https://unpkg.com/tocbot@4.12.3/dist/tocbot.min.js"></script>
+<script>
+
+document.addEventListener("DOMContentLoaded", function () {
+  // Start tocbot
+  tocbot.init({
+    // Where to render the table of contents.
+    tocSelector: ".toc",
+    // Where to grab the headings to build the table of contents.
+    contentSelector: "#livemark-main",
+    // Which headings to grab inside of the contentSelector element.
+    headingSelector: "h2",
+    // For headings inside relative or absolute positioned containers within content.
+    hasInnerContainers: true,
+    // Called each time a heading is parsed. Expects a string in return.
+    headingLabelCallback: (label) => label.replace(/(^#|#$)/g, "").trim(),
+    // Disable generating ordered lists (ol)
+    orderedList: false,
+    // Fix active link class
+    onClick: syncList,
+    scrollEndCallback: syncList,
+  });
+
+  // Style list
+  $("#livemark-topics .toc > ul").addClass("primary");
+  $("#livemark-topics .toc > ul > li").addClass("primary");
+  $("#livemark-topics .toc > ul > li > a").addClass("primary");
+  $("#livemark-topics .toc ul.is-collapsible").addClass("secondary");
+  $("#livemark-topics .toc ul.is-collapsible li").addClass("secondary");
+  $("#livemark-topics .toc ul.is-collapsible li > a").addClass("secondary");
+  for (const element of $("#livemark-topics .primary")) {
+    if ($(element).find(".secondary").length) {
+      $(element).addClass("group");
+    }
+  }
+
+  // Sync list
+  function syncList() {
+    for (const element of $("#livemark-topics li.primary")) {
+      if ($(element).find(".is-active-li").length) {
+        $(element).addClass("is-active-li");
+      }
+    }
+  }
+  syncList();
+});
+
+</script>
+<script>
+
+document.addEventListener("DOMContentLoaded", function () {
+  for (const link of $("a")) {
+    const href = $(link).attr("href");
+    if (href.startsWith("#card=")) {
+      const code = href.split("=")[1];
+      $(link).click(async () => {
+        // TODO: handle errors
+        const response = await fetch(`/assets/cards/${code}.html`);
+        const html = await response.text();
+        $("#livemark-cards .modal-title").html("");
+        $("#livemark-cards .modal-body").html(html);
+        $("#livemark-cards h1").appendTo("#livemark-cards .modal-title");
+        $("#livemark-cards .modal").modal();
+      });
+    }
+  }
+});
+
+</script>
+
+<div id="livemark-cards">
+  <div class="modal fade" tabindex="-1" role="dialog">
+    <div class="modal-dialog modal-lg" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title"></h5>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">×</span>
+          </button>
+        </div>
+        <div class="modal-body">
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<script src="https://unpkg.com/ue-scroll-js@2.0.2/dist/ue-scroll.min.js"></script>
+<script>
+
+document.addEventListener("DOMContentLoaded", function () {
+  // Init
+  const readability = localStorage.getItem("livemark-display-readability");
+  if (readability === "plus") {
+    document.body.classList.add("with-readability");
+  } else {
+    document.body.classList.remove("with-readability");
+  }
+
+  // Plus
+  document
+    .getElementById("livemark-display-plus")
+    .addEventListener("click", function () {
+      document.body.classList.add("with-readability");
+      localStorage.setItem("livemark-display-readability", "plus");
+    });
+
+  // Minus
+  document
+    .getElementById("livemark-display-minus")
+    .addEventListener("click", function () {
+      document.body.classList.remove("with-readability");
+      localStorage.setItem("livemark-display-readability", "minus");
+    });
+
+  // Print
+  document
+    .getElementById("livemark-display-print")
+    .addEventListener("click", function () {
+      window.print();
+    });
+
+  // Scroll
+  const scrollSpeed = parseInt("10");
+  UeScroll.init({ element: "#livemark-display-scroll .fa", scrollSpeed });
+});
+
+</script>
+
+<div id="livemark-display">
+  <div class="control" id="livemark-display-print" title="Decrease readability">
+    <span class="fa fa-print"></span>
+  </div>
+  <div class="control" id="livemark-display-plus" title="Increase readability">
+    <span class="fa fa-plus"></span>
+  </div>
+  <div class="control" id="livemark-display-minus" title="Decrease readability">
+    <span class="fa fa-minus"></span>
+  </div>
+  <div class="control" id="livemark-display-scroll" title="Back to top">
+    <span class="fa fa-chevron-up"></span>
+  </div>
+</div>
+<script>
+
+document.addEventListener("DOMContentLoaded", function () {
+  const container = $(".livemark-infinity");
+  if (container.length) {
+    const elements = container
+      .children()
+      .map((index, element) => element.outerHTML)
+      .get();
+    container.html(elements.splice(0, 100));
+    container.show();
+    window.addEventListener("scroll", () => {
+      const element = container.get(0);
+      const position = window.scrollY + window.innerHeight + 100;
+      const threshold = element.offsetTop + element.scrollHeight;
+      if (position > threshold) {
+        container.append(elements.splice(0, 100));
+      }
+    });
+  }
+});
+
+</script>
+<script>
+
+document.addEventListener("DOMContentLoaded", function () {
+  const left = document.getElementById("livemark-left");
+  const mobile = document.getElementById("livemark-mobile");
+  mobile.addEventListener("click", () => {
+    left.classList.toggle("active");
+    mobile.classList.toggle("active");
+  });
+  // NOTE: We can replace the selector by 'a:not[href=""]' after #57
+  left.querySelectorAll("li:not(.group) a").forEach((link) => {
+    link.addEventListener("click", () => {
+      if (left.classList.contains("active")) {
+        left.classList.remove("active");
+        mobile.classList.remove("active");
+      }
+    });
+  });
+});
+
+</script>
+
+<div id="livemark-mobile">
+  <div class="stack" title="Toggle menu">
+    <span class="bar"></span>
+    <span class="bar"></span>
+    <span class="bar"></span>
+  </div>
+</div>
+<script src="https://unpkg.com/paginationjs@2.1.5/dist/pagination.min.js"></script>
+<script>
+
+document.addEventListener("DOMContentLoaded", function () {
+  const container = $(".livemark-pagination");
+  if (container.length) {
+    const elements = container
+      .children()
+      .map((index, element) => element.outerHTML)
+      .get();
+    container.html(`
+      <div class="livemark-pagination-data"></div>
+      <div class="livemark-pagination-navs"></div>
+    `);
+    container.find(".livemark-pagination-navs").pagination({
+      dataSource: elements,
+      callback: (html) => {
+        container.find(".livemark-pagination-data").html(html);
+      },
+    });
+    container.show();
+  }
+});
+
+</script>
+<script src="https://unpkg.com/lunr@2.3.9/lunr.min.js"></script>
+<script src="https://unpkg.com/jquery-highlight@3.5.0/jquery.highlight.js"></script>
+<script src="https://unpkg.com/jquery.scrollto@2.1.3/jquery.scrollTo.js"></script>
+<script>
+
+document.addEventListener("DOMContentLoaded", function () {
+  const prepare = () => {
+    const searchParams = new URLSearchParams(window.location.search);
+    const query = searchParams.get('query') || ''
+    if (query.length >= 3) {
+      searchInput.value = query
+    }
+  }
+  const search = () => {
+    unhighlight()
+    query = searchInput.value
+    searchOutput.innerHTML = ''
+    searchOutput.style.visibility = 'hidden'
+    const searchParams = new URLSearchParams(window.location.search);
+    if (query.length < 3) return
+    const results = searchIndex.search(query)
+    if (!results.length) return
+    searchParams.set('query', query)
+    const newRelativePathQuery = window.location.pathname + '?' + searchParams.toString();
+    history.pushState(null, '', newRelativePathQuery);
+    const elements = []
+    for (const result of results) {
+      const item = searchItems[result.ref]
+      const link = `/${item.path}.html`
+      const cls = window.location.pathname === link ? 'class="active"' : ''
+      elements.push(`<li ${cls}><a href="${link}?query=${query}">${item.name}</a></li>`)
+    }
+    searchOutput.innerHTML = `<ul>\n${elements.join('\n')}\n</ul>`
+    searchOutput.style.visibility = 'visible'
+    highlight()
+  }
+  const highlight = () => {
+    const stem = lunr.stemmer(new lunr.Token(query)).str
+    $('#livemark-main').highlight(stem, {className: 'livemark-search-found'});
+    setTimeout(() => {
+      $(window).scrollTo($('.livemark-search-found').first(), 1000)
+    }, 1000)
+  }
+  const unhighlight = () => {
+    $('#livemark-main').unhighlight({className: 'livemark-search-found'});
+  }
+  const searchItems = {
+          'index': {
+          'name': 'CKAN Extensions',
+          'path': 'index',
+          'text': "# CKAN Extensions ## Introduction **CKAN** is an open-source DMS (data management system) for powering data hubs and data portals. CKAN makes it easy to publish, share and use data. It powers catalog.data.gov, open.canada.ca/data, data.humdata.org among many other sites. We have [collected](data.html) and sorted by the stars count all the CKAN extensions available as repositories on Github. Read more about [CKAN](https://ckan.org/). If you are interested in contributing to this livemark please follow this [guide](contrib.html). ## Extensions ```html markup ckan-ckanext-dcat CKAN \u2665 DCAT Github 119 ckan-ckanext-harvest Remote harvesting extension for CKAN Github 103 ckan-ckanext-spatial Geospatial extension for CKAN Github 99 ckan-ckanext-scheming Easy, shareable custom CKAN schemas Github 62 open-data-ckanext-canada Government of Canada CKAN Extension - Extension \u00e0 CKAN du Gouvernement du Canada Github 40 ckan-ckanext-pages A simple builtin CMS for CKAN sites Github 39 frictionlessdata-ckanext-datapackager CKAN extension for importing/exporting Data Packages. Github 31 ckan-ckanext-googleanalytics CKAN extension to integrate Google Analytics data into CKAN. Gives download stats on package pages, list of most popular packages, etc. Github 30 datagovuk-ckanext-dgu CKAN extension for data.gov.uk Github 30 NaturalHistoryMuseum-ckanext-ldap A CKAN extension that provides LDAP authentication. Github 30 TkTech-ckanext-cloudstorage Implements support for resource storage against multiple popular providers via apache-libcloud (S3, Azure Storage, etc...) Github 29 ckan-ckanext-showcase A ckan extension to showcase datasets in use Github 28 GSA-ckanext-geodatagov data.gov extension Github 27 ckan-ckanext-xloader Express Loader - quickly load data into DataStore. A replacement for DataPusher. Github 27 ckan-ckanext-dashboard Organize views in a single dashboard Github 26 alexandrainst-ckanext-realtime Build realtime apps with CKAN Github 26 ckan-ckanext-mapviews CKAN Resource View to build maps and choropleth maps Github 25 ckan-ckanext-qa CKAN QA Extension Github 21 conwetlab-ckanext-oauth2 OAuth2 support for CKAN Github 21 ckan-ckanext-pdfview PDF viewer for CKAN Github 20 bcgov-ckanext-bcgov BC Data Catalogue source code, main ckan extension Github 20 ckan-ckanext-datastorer Get files from ckan into the webstore. Github 20 ckan-ckanext-hierarchy Organization hierarchy - CKAN extension Github 19 ckan-ckanext-archiver Archive CKAN resources Github 19 frictionlessdata-ckanext-validation CKAN extension for validating Data Packages using Table Schema. Github 19 stadt-karlsruhe-ckanext-extractor A full text and metadata extractor for CKAN Github 19 ckan-ckanext-fluent Multilingual fields for CKAN Github 18 NaturalHistoryMuseum-ckanext-nhm A CKAN extension for the Natural History Museum\u0027s Data Portal. Github 18 HHS-ckanext-datajson Custom CKAN extension for Healthdata.gov Github 17 pduchesne-ckanext-geoview CKAN Geospatial ResourceView Github 16 conwetlab-ckanext-datarequests A plugin that allows users to request data that is not published yet Github 16 GSA-ckanext-datagovtheme Theme for Data Catalog Github 16 conwetlab-ckanext-privatedatasets CKAN extension that allows a user to create private datasets only visible to certain users. The extension provides also an API to specify which users can access private datasets Github 16 okfn-ckanext-s3filestore Use Amazon S3 as a filestore for CKAN Github 15 NaturalHistoryMuseum-ckanext-doi A CKAN extension for assigning a digital object identifier (DOI) to datasets, using the DataCite DOI service. Github 15 dadosgovbr-ckanext-dadosgovbr Plugin / Tema do Portal Brasileiro de Dados Abertos do Governo Federal Github 15 okfn-ckanext-wordpresser Wordpress integration for CKAN Github 15 ckan-ckanext-report CKAN report infrastructure Github 14 data-govt-nz-ckanext-security A CKAN extension to hold various security improvements for CKAN Github 14 ckan-ckanext-issues CKAN Issues Extension Github 14 jqnatividad-ckanext-officedocs MS Office and OpenOffice Resource viewer Github 14 datacats-ckanext-geopusher Autoconvert Shapefiles to GeoJSON and send them back to CKAN Github 14 datacats-ckanext-webhooks Webhooks for your CKAN Github 13 ckan-ckanext-basiccharts Line, bar and pie charts for CKAN Github 12 OpenGov-OpenData-ckanext-discourse CKAN + Discourse Github 12 PublicaMundi-ckanext-publicamundi PublicaMundi main CKAN extension Github 12 azavea-ckanext-odp_theme OpenDataPhilly CKAN customizations Github 12 keitaroinc-ckanext-visualize CKAN extension to visualize data in DataStore Github 12 ckan-ckanext-disqus Extension that adds the Disqus commenting system to CKAN Github 11 datopian-ckanext-querytool :mag: :bar_chart: :earth_asia: CKAN extension that will provide data querying and story sharing with pre configured set of rules :newspaper: :clipboard: Github 11 datadotworld-ckanext-datadotworld CKAN extension for data.world Github 11 okfn-ckanext-example CKAN Extension that demonstrates some common patterns for customising a CKAN instance. Github 11 SENATICS-ckanext-opendatagovpy Datos Abiertos de Gobierno del Paraguay Github 11 okfn-ckanext-datahub Plugin for datahub Github 11 liip-ckanext-ddi CKAN extension for DDI, developed for the World Bank Github 10 cphsolutionslab-ckanext-dataproxy Use foreign data wrappers as source for the datastore in CKAN Github 10 datacats-ckanext-featuredviews Display CKAN resource views on dataset and home pages Github 10 okfn-ckanext-unhcr CKAN extension for the UNHCR RIDL project Github 10 kata-csc-ckanext-oaipmh OAI PMH extension to CKAN Github 10 IATI-ckanext-iati CKAN extension for the IATI Registry Github 10 keitaroinc-ckanext-saml2auth CKAN extension to enable Single Sign-On (SSO) for CKAN data portals via SAML2 Authentication. Github 10 datopian-ckanext-developerpage CKAN extension to display useful and important system information for portal maintenance and development Github 10 alantygel-ckanext-tagmanager Tag management for CKAN Github 10 datagovuk-ckanext-ga-report For creating detailed reports of CKAN analytics, sliced by group Github 9 open-data-ckanext-wet-boew CKAN extension for the Web Experience Toolkit Github 9 ckan-ckanext-apihelper API Helper extension. Github 9 DanePubliczneGovPl-ckanext-danepubliczne Layout and custom fields for DanePubliczne.gov.pl Github 9 geosolutions-it-ckanext-geonetwork GeoNetwork harvester for CKAN Github 9 opendata-swiss-ckanext-switzerland DCAT-AP Switzerland \u0026 Templates Github 9 okfn-ckanext-pdeu Custom CKAN Extension for PublicData.eu Github 9 datopian-ckanext-blob-storage CKAN extension to offload blob storage to cloud storage providers (S3, GCS, Azure etc). Github 9 okfn-ckanext-envvars CKAN configuration settings available from env vars Github 9 EnviDat-ckanext-restricted CKAN extension for restricting access to resources Github 8 geosolutions-it-ckanext-dcatapit CKAN extension for the Italian Open Data Portals (DCAT_AP-IT) Github 8 AppGeo-ckanext-agsview Description is not provided Github 8 transparenzportalhamburg-ckanext-fulltext Description is not provided Github 8 kata-csc-ckanext-kata Kata extension for CKAN Github 8 datagovuk-ckanext-os Spatial widgets developed in mainly by Ordnance Survey (CKAN extension) Github 8 stadt-karlsruhe-ckanext-discovery A CKAN extension to help people discover your data Github 8 AjuntamentdeBarcelona-ckanext-odatabcn Description is not provided Github 8 whythawk-ckanext-odata Description is not provided Github 7 CodeForAfrica-ckanext-openafrica A CKAN extension to style and add features to the openAFRICA platform. Accessible at http://openafrica.net Github 7 datagovuk-ckanext-datapreview Data preview for ckan from local resource cache Github 7 NaturalHistoryMuseum-ckanext-dataspatial Ckan extension to enable geospatial searches within the datastore Github 7 aptivate-ckanext-datasetthumbnail A CKAN plugin that generates thumbnails for datasets Github 7 datopian-ckanext-versioning Deprecated. See https://github.com/datopian/ckanext-versions. \u23f0 CKAN extension providing data versioning (metadata and files) based on git and github. Github 7 datopian-ckanext-sweden CKAN extension for \u00d6ppnadata.se, the Swedish data management platform Github 7 OpenGov-OpenData-ckanext-cartodbmap CKAN CartoDB ResourceView Github 7 tdt-ckanext-tdt A The DataTank extension for CKAN Github 7 REEEP-ckanext-climate-tagger Climate Tagger CKAN Extension - provides suggested tags for climate compatible content for CKAN Github 7 datopian-ckanext-datagm Code and theme for the Data GM Open Data Portal at http://datagm.org.uk/ Github 7 datopian-ckanext-authz-service Use CKAN to provide authorization tokens for other related systems Github 7 ckan-ckanext-intro A quick interactive introduction to writing CKAN extensions Github 6 datawagovau-ckanext-datawagovautheme CKAN customisations and theme for data.wa.gov.au Github 6 milicp-ckanext-lire CKAN extension for managing datasets relationships Github 6 ckan-ckanext-s3archive Archive CKAN datastore to S3 Github 6 OpenGov-OpenData-ckanext-cob_theme City of Boston CKAN theme based on brand guidelines designed by IDEO Github 6 ckan-ckanext-drupal7 Drupal7 authentication for ckan Github 6 DataShades-ckanext-cloudconnector An extension for the CKAN open data platform for storing resources on cloud storage Github 6 ckan-ckanext-deadoralive A CKAN extension for the Dead or Alive link checker service Github 6 datopian-ckanext-tayside Main extension for Tayside Github 6 datopian-ckanext-versions A CKAN extension for data versioning. Specifically dataset and resource versions. Github 6 datopian-ckanext-orgdashboards :clipboard: CKAN extension for creating organization dashboards :clipboard: Github 6 aptivate-ckanext-datasetversions CKAN extension to support multiple versions of a dataset Github 6 bcgov-ckanext-openapiviewer BC Data Catalogue extension for OpenAPI (AKA Swagger) console Github 6 okfn-ckanext-inspire Description is not provided Github 6 okfn-ckanext-lacounts CKAN extension for the LA Counts project Github 6 datopian-ckanext-noanonaccess Disable anonymous access to CKAN by redirecting users to login page. Github 6 okfn-ckanext-rdf [DEPRECATED] - Please use https://github.com/ckan/ckanext-dcat Github 6 keitaroinc-ckanext-knowledgehub Description is not provided Github 6 NaturalHistoryMuseum-ckanext-datasolr datasolr is a Ckan extension to use Solr for datastore queries Github 6 okfn-ckanext-vegaview VegaJS\u0027 view extension for CKAN Github 6 NuCivic-ckanext-cmap Description is not provided Github 6 open-data-ckanext-repeating Repeating fields for CKAN: obsoleted by ckanext-scheming 2.1 multiple_text fields Github 5 cmuphillycapstone-ckanext-dictionary Description is not provided Github 5 EnviDat-ckanext-composite Extension for structured metadata fields based on ckanext-scheming and ckanext-repeating Github 5 ngds-ckanext-ngds-bku03232018 CKAN extension for NGDS-specific customizations Github 5 datopian-ckanext-requestdata :email: :mailbox_with_mail: CKAN extension for requesting new data :email: :mailbox_with_mail: Github 5 ckan-ckanext-viewhelpers Helpers for creating views for CKAN Github 5 okfn-ckanext-mx Theme for datos.gob.mx Github 5 datopian-ckanext-orgportals A CKAN extension for creating organization portals Github 5 alphagov-ckanext-datagovuk CKAN extension for data.gov.uk Github 5 datopian-ckanext-c3charts c3js based charts for CKAN Github 5 ngds-ckanext-geoserver-bku03232018 Description is not provided Github 5 ongov-ckanext-ontario_theme Theme for Ontario\u0027s CKAN based data catalogues. Github 5 datagovau-ckanext-zippreview Preview contents of ZIP files, even if they are hosted on external sites Github 5 datopian-ckanext-datapub CKAN extension to integrate your custom DataPub.js based dataset and resource editor Github 5 georgepm-ckanext-sparql SPARQL Interface for Ckan Github 5 etri-odp-ckanext-resourceauthorizer Resource authorizing extension for CKAN Github 5 okfn-ckanext-ecportal CKAN extension for the European Union Open Data Portal Github 5 NaturalHistoryMuseum-ckanext-ckanpackager A CKAN extension that provides a user interface to download resources with ckanpackager. Github 5 kata-csc-ckanext-shibboleth CKAN shibboleth identification plugin Github 5 AjuntamentdeBarcelona-ckanext-federagobes Description is not provided Github 5 datopian-ckanext-validation Description is not provided Github 5 bopen-ckanext-mapsearch A CKAN extension to add an scale-aware map-centred search Github 5 okfn-ckanext-datacatalogs CKAN datacatalogs.org theme Github 5 PopulateTools-ckanext-ansible-workflow Ansible role for managing and deploying CKAN extensions Github 5 openresearchdata-ckanext-oaipmh OAI-PMH harvester for CKAN Github 4 cfpb-ckanext-cfpb-extrafields Description is not provided Github 4 EUDAT-B2FIND-ckanext-datesearch Description is not provided Github 4 fraunhoferfokus-ckanext-govdatade GovData.de specific CKAN extension Github 4 GovDataOfficial-ckanext-dcatde DE: Dieses Repository beinhaltet die Erweiterung von ckanext-dcat auf die Spezifikation DCAT-AP.de. EN: This is a DCAT-AP.de specific CKAN extension for providing and importing DCAT-AP.de-Profile data. Github 4 kata-csc-ckanext-ddi DDI harvester for ckanext-kata Github 4 ckan-ckanext-searchhistory Save search history to be used later for autocomplete and statistics Github 4 datopian-ckanext-opendatani Description is not provided Github 4 NaturalHistoryMuseum-ckanext-gallery CKAN extension for a dataset gallery view. Github 4 gsi-cyberjapan-ckanext-basemaps ckanext basemaps plugin Github 4 datopian-ckanext-edo Description is not provided Github 4 CodeandoMexico-ckanext-datamx_theme Codeando Mexico\u0027s Custom Theme CKAN Extension. Github 4 whythawk-ckanext-ldap LDAP authentication for ckan Github 4 PublicaMundi-ckanext-vectorstorer CKAN extension to upload vector geospatial data, store and publish through OGC services. Github 4 okfde-ckanext-offenedaten CKAN extension for OffeneDaten.de (theme/UI \u0026 harvesters) Github 4 VilledeMontreal-ckanext-montreal Theming extension for Montreal city. Github 4 damalaga-ckanext-malaga M\u00e1laga city council CKAN Extension Github 4 datagovuk-ckanext-taxonomy Hierarchical tags Github 4 okfn-ckanext-collaborators User-level permissions for CKAN datasets Github 4 okfn-ckanext-apps [DEPRECATED - now part of CKAN core as of v1.7] Apps and ideas catalogue extension for CKAN. Associate apps and ideas to datasets. Github 4 OCHA-DAP-ckanext-powerview Description is not provided Github 4 ogdch-ckanext-ogdch CKAN templates and translations for opendata.admin.ch Github 4 datopian-ckanext-montrosemaps Description is not provided Github 4 alexbyrnes-ckanext-mongodb CKAN extension for MongoDB Github 4 datopian-ckanext-gosh Extension for housing custom modification to the ckan gosh portal Github 4 NaturalHistoryMuseum-ckanext-dev CKAN extention for development tools. Github 4 datopian-ckanext-birmingham Description is not provided Github 4 datopian-ckanext-abtassociates Description is not provided Github 4 etalab-ckanext-fedmsg CKAN extension for sending activity events to the Fedora Infrastructure Message Bus (fedmsg) Github 4 datopian-ckanext-aircan The custom extension for notifying(triggering) the Airflow DAG about the data to be uploaded to DataStore Github 4 Helsingin-kaupungin-tietokeskus-ckanext-hrifi CKAN theme for ckan.hri.fi Github 4 srkunze-ckanext-semantic integration of lodstats and personalization features based on it Github 4 datopian-ckanext-panamatheme Description is not provided Github 4 okfn-ckanext-csw Description is not provided Github 4 datopian-ckanext-logstash Description is not provided Github 4 etalab-ckanext-oauth2 OAuth2 support for CKAN Github 4 EnviDat-ckanext-envidat_theme Extension to to customize the content and appearance of CKAN for the Envidat project (WSL) Github 4 datarefuge-ckanext-datarefuge_theme CKAN Theme for Data Refuge Repository Github 4 datopian-ckanext-datastore-bigquery An extension that backs CKAN\u0027s datastore on Google BigQuery Github 4 datopian-ckanext-dataexplorer-react A new Data Explorer for CKAN built on React. Github 4 aptivate-ckanext-syndicate A CKAN plugin that allows syndication (pushing) of datasets to another ckan repository Github 3 nhsengland-ckanext-adfs Active Directory authentication for CKAN Github 3 davidread-ckanext-downloadall CKAN extension that adds a \"Download all\" button to datasets Github 3 conwetlab-ckanext-storepublisher CKAN extension to publish public datasets in the FIWARE Store as offerings Github 3 datagovau-ckanext-ga-report Google analytics report for CKAN Github 3 rossjones-ckanext-gdoc A previewer for CKAN that uses the Google Doc Previewer to view documents Github 3 OpenGov-OpenData-ckanext-bostonschema Description is not provided Github 3 developmentseed-ckanext-mvt CKAN extension to generate Vector Tiles from vector data Github 3 EUDAT-B2FIND-ckanext-b2find B2FIND extension for CKAN Github 3 GSA-ckanext-extlink Description is not provided Github 3 abgov-ckanext-workflow Description is not provided Github 3 yacme-ckanext-googleauth CKAN extension for use Google as authentication authority Github 3 redlink-gmbh-ckanext-redlink CKAN extension to connect to Redlink triple store. Github 3 okfn-ckanext-importlib Description is not provided Github 3 okfn-ckanext-tsbsatellites repo for Satellites Catapult\u0027s CKAN Github 3 GSA-ckanext-dcat_usmetadata Description is not provided Github 3 CityOfPhiladelphia-ckanext-highlight-related-items Surface a dataset\u0027s related items more visibly Github 3 okfn-ckanext-resourcesfilter Interactive paginated resources list for the CKAN dataset page Github 3 ckan-ckanext-rq Backport of RQ background jobs for CKAN versions before 2.7.0 Github 3 datopian-ckanext-honduras Description is not provided Github 3 NaturalHistoryMuseum-ckanext-graph A CKAN extension that adds a graph view for resources. Github 3 okfn-ckanext-storage CKAN storage extension. Github 3 alantygel-ckanext-semantictags CKAN Extensions for making semantic tags available Github 3 openresearchdata-ckanext-ord-hierarchy An extension to add a hierarchical structure to datasets Github 3 asc-csa-ckanext-asc-csa \ud83d\udcc8 Extension CKAN pour le portail de donn\u00e9es et information ouvertes de l\u0027ASC | \ud83d\udcc8CKAN Extension for the CSA open data and information portal Github 3 NaturalHistoryMuseum-ckanext-versioned-datastore A CKAN extension providing a versioned datastore using MongoDB and Elasticsearch. Github 3 opendatamonitor-ckanext-harmonisation Tool for harmonising metadata labels and values Github 3 okfn-ckanext-demo ckan demo site extension Github 3 datopian-ckanext-story Description is not provided Github 3 dataoverheid-ckanext-donl CKAN extensie voor data.overheid.nl Github 3 datopian-ckanext-coastal Description is not provided Github 3 belgium-its-steering-committee-ckanext-benap Belgium\u0027s multimodal transport service catalogue Github 3 NaturalHistoryMuseum-ckanext-gbif A CKAN extension that that connects with the GBIF API. Github 3 okfn-ckanext-drupal drual integration Github 3 CENDARI-ckanext-dariahshibboleth DARIAH Shibboleth authentication plugin for CKAN Github 3 etri-odp-ckanext-keycloak SSO authentication extension with Keycloak for CKAN Github 3 microcomp-ckanext-torrent CKAN extension that enables creating torrent files (seeding, tracking) Github 3 okfn-ckanext-feedcontent Allows for content from rss/atom feeds to be inserted into pages. Github 3 keitaroinc-ckanext-datagovmk Description is not provided Github 3 datopian-ckanext-auth Login via CKAN Classic from a separate service. Github 3 geosolutions-it-ckanext-geonode CKAN harvester for GeoNode instances Github 3 okfn-ckanext-oauth Description is not provided Github 3 BioplatformsAustralia-ckanext-bpatheme CKAN theme for BPA Github 3 aliwaqas333-ckanext-kpodp_theme KP opendata portal ckanext theme. Site is up at http://opendata.kp.gov.pk Github 3 EnviDat-ckanext-envidat_schema Implementation of the metadata schema for Envidat based on scheming and repeating extensions Github 3 datopian-ckanext-us_ed_theme Theming extension for US Dept. of Education portal Github 3 datopian-ckanext-vitalstrategies_shanghai Description is not provided Github 3 cbgaindia-ckanext-openbudgetsin_theme Custom CKAN theme extension for Open Budgets India Github 3 GSA-ckanext-saml2 SAML2 Athentication extension Github 2 6aika-ckanext-rating Description is not provided Github 2 datagovau-ckanext-cesiumpreview A plugin to CKAN to use National Map as a previewer for data.gov.au. Github 2 datagovau-ckanext-agls AGLS metadata extension for CKAN Github 2 vrk-kpa-ckanext-ytp-comments CKAN extension for adding comments to datasets Github 2 open-data-ckanext-recombinant Create datastore tables for organizations and provide combined output Github 2 NaturalHistoryMuseum-ckanext-userdatasets A CKAN extension that allows organisation members to create datasets, and edit or delete the datasets they have created. Github 2 keitaroinc-ckanext-cas CAS (Central Authentication Service) client extension for CKAN Github 2 datagovsg-ckanext-s3-resources CKAN Extension to upload resources to AWS S3 https://data.gov.sg Github 2 datosgcba-ckanext-gcbaandinotheme Repositorio del theme visual de Andino para el portal de Datos Abiertos de la Ciudad Aut\u00f3noma de Buenos Aires. http://data.buenosaires.gob.ar/ Github 2 datagovau-ckanext-datagovau Site specific customisations for the hosting of data.gov.au. Github 2 CodeForAfrica-ckanext-notify [EXPERIMENTAL] CKAN extension to provide more options for notifications such as Slack notifications. Github 2 conwetlab-ckanext-wirecloud_view Provide visualization dashboards on CKAN using WireCloud Github 2 data-govt-nz-ckanext-dia_theme CKAN theme for the New Zealand open data portal - data.govt.nz Github 2 okfn-ckanext-hidegroups A CKAN 2 extension that removes CKAN\u0027s groups feature from the web interface Github 2 govro-ckanext-inventory CKAN extension for receiving dataset inventories from organizations Github 2 ckan-ckanext-repo Shows information about the CKAN and extensions versions an instance is running. Mostly useful for development sites. Github 2 vrk-kpa-ckanext-ytp-request Organization member request handling Github 2 okfn-ckanext-socrata CKAN harvester extension for Socrata data catalogs Github 2 datopian-ckanext-dundee Theming extension for Dundee city Github 2 datalocale-ckanext-datalocale extension CKAN d\u00e9velopp\u00e9e pour le projet http://catalogue.datalocale.fr Github 2 ckan-ckanext-persona A CKAN extension for logging in using Mozilla Persona Github 2 qld-gov-au-ckanext-s3filestore Use Amazon S3 as a filestore for CKAN Github 2 PopulateTools-ckanext-topics Topics and subtopics for classifying datasets in CKAN Github 2 jorabra-ckanext-simplesso A simple CKAN SSO plugin Github 2 shidax-ckanext_notification An example of CKAN extension. Notify new resource via the twitter Github 2 zbw-ckanext-dara CKAN extension that integrates da|ra metadata schema and enables DOI registration for research data Github 2 cphsolutionslab-ckanext-customuserprivileges Description is not provided Github 2 nhsengland-ckanext-introjs Adds intro.js to CKAN so users can follow a guided tour of the UI. Github 2 okfn-ckanext-facetcollapse Description is not provided Github 2 UCSUR-Pitt-ckanext-wprdctheme This is an extension to CKAN that provides a custom theme for the Western Pennsylvania Regional Data Center. Github 2 ckan-ckanext-eurovoc Add Eurovoc categories to CKAN\u0027s dataset schema Github 2 openclimatefix-ckanext-openenergy Special customisations for the Energy Data Search. Github 2 okfn-ckanext-follower CKAN Follower Extension Github 2 datopian-ckanext-opendataje Description is not provided Github 2 datopian-ckanext-inverness Theming extension for Inverness city Github 2 ciudadanointeligente-ckanext-junar Connector for ckan to use junar.com Github 2 datopian-ckanext-viderum Viderum default extension for CKAN Github 2 depositar-ckanext-wikidatakeyword Wikidata-powered keyword field for CKAN Github 2 etri-odp-ckanext-jena Semantic data management extension with Apache Jena for CKAN Github 2 berlinonline-ckanext-berlin CKAN extension for the datenregister.berlin.de portal Github 2 okfn-ckanext-stats Description is not provided Github 2 okfn-ckanext-social Description is not provided Github 2 camptocamp-ckanext-theme CKAN theme for geOrchestra SDIs Github 2 berlinonline-ckanext-fisbroker CKAN Plugin to harvest Berlin\u0027s FIS-Broker geographic information system into the datenregister.berlin.de schema. Github 2 datopian-ckanext-montrose Description is not provided Github 2 okfn-ckanext-dgutheme Description is not provided Github 2 fraunhoferfokus-ckanext-berlin Description is not provided Github 2 berlinonline-ckanext-validationapi A public API for CKAN\u0027s validator functions Github 2 AURIN-ckanext-aurintheme AURIN theme Github 2 thenets-ckanext-dadosabertos Plugin / Tema do Portal de Dados Abertos do Governo Federal - Brasil Github 2 reedv-ckanext-publicrestrictiondatasets Description is not provided Github 2 datopian-ckanext-perth Theming extension for Perth city Github 2 datopian-ckanext-nokia Description is not provided Github 2 ilrt-ckanext-oaipmh OAI PMH extension to CKAN Github 2 okfn-ckanext-iceland Icelandic theme for CKAN Github 2 boykoc-ckanext-msal Description is not provided Github 2 kata-csc-ckanext-rems REMS extension for CKAN Github 2 NextGeoss-ckanext-nextgeoss Theme for NextGEOSS data hub Github 2 datopian-ckanext-opnv Extension for German public transport companies\u0027 portal. Github 2 rossjones-ckanext-statsd Simple statsd metrics for CKAN Github 2 okfn-ckanext-htsql An extension that enables htsql queries for the new datastore. Github 2 datopian-ckanext-aridhia Description is not provided Github 2 wardi-ckanext-fileedit Simple file editor for CKAN admin panel Github 2 abgov-ckanext-geomapviewer Ckan Geo Map Viewer Extension Github 2 jimmccusker-ckanext-arrayexpress An ArrayExpress importer for CKAN. Github 2 cbgaindia-ckanext-budgetviz CKAN Extension to preview visualization for datasets Github 2 datopian-ckanext-vrr Description is not provided Github 2 shemogumbe-ckanext-dataviewanalytics extension for data set visualization statistics Github 2 EnviDat-ckanext-passwordless Extension to allow paswordless login in CKAN Github 2 okfn-ckanext-moderatededits Moderated Edits extension for CKAN 1.4 Github 2 DataShades-ckanext-githubrepopreview A CKAN plugin for previewing GitHub repository resources. Github 2 opendatatrentino-ckanext-patstatweb Harvester script to populate CKAN from the server of the statistics department of the Provincia Autonoma di Trento Github 2 ciudadanointeligente-ckanext-forms Manages dataset forms in ckan Github 2 datopian-ckanext-aberdeen Theming extension for Aberdeen city. Github 2 ciudadanointeligente-ckanext-forms Manages dataset forms in ckan Github 2 okfn-ckanext-moderatededits Moderated Edits extension for CKAN 1.4 Github 2 DataShades-ckanext-githubrepopreview A CKAN plugin for previewing GitHub repository resources. Github 2 datopian-ckanext-aberdeen Theming extension for Aberdeen city. Github 2 Psykar-ckanext-ands Description is not provided Github 2 openspending-ckanext-budgets Budget Data Package support for CKAN Github 2 rossjones-ckanext-pubsub WIP: Instant notifications for datasets. Github 2 geosolutions-it-ckanext-mapstore CKAN Extension for MapStore Preview and GeoStore Harvesting Github 2 datopian-ckanext-vag Description is not provided Github 2 data-govt-nz-ckanext-dia A simple CKAN extension to hold all overrides to CKAN required by the DIA (Department of Internal Affairs). Github 2 NextGeoss-ckanext-nextgeossharvest Harvesters for NextGEOSS Github 2 conwetlab-ckanext-datastore_restful Extension that provides a fully Restful API to access the data contained in the DataStore. Github 2 datopian-ckanext-asset-storage CKAN extension implementing IUploader interface for cloud storage of assets e.g. images. Intended for use with ckanext-blob-storage that provides direct to cloud storage of resource data. Github 2 DCOR-dev-ckanext-dc_view Preview DC data in DCOR Github 2 DataShades-ckanext-create_typed_package Description is not provided Github 2 EnviDat-ckanext-package_converter CKAN Extension for converting metadata Github 2 opendatazurich-ckanext-stadtzh-harvest Harvester extension for the City of Zurich Github 2 datopian-ckanext-saasportal_quote Description is not provided Github 2 conwetlab-ckanext-fiware_header Description is not provided Github 2 CSIRO-enviro-informatics-ckanext-user_ext Description is not provided Github 2 NaturalHistoryMuseum-ckanext-contact A CKAN extension for adding popup contact forms to pages. Github 1 etalab-ckanext-sentry Sentry support for CKAN Github 1 DataShades-ckanext-workflow Description is not provided Github 1 telefonicaid-ckanext-ngsiview ckanext-ngsiview Github 1 opintel-ckanext-mxtheme Template CKAN para datos.gob.mx Github 1 kata-csc-ckanext-sitemap Sitemap search engine support for CKAN Github 1 jesusredondo-ckanext-federgob Extension to ease the federation process of CKAN catalogs with the global catalog of Spain, [Datos.gob](http://www.datos.gob.es/). Github 1 aptivate-ckanext-userautoadd CKAN extension to add new users to an existing organization Github 1 datagovuk-ckanext-certificates Retrieval and helpers for ODI Open Data certificates Github 1 abgov-ckanext-open_alberta Ckan extension developed for use on open.alberta.ca Github 1 opendatatrentino-ckanext-datitrentinoit Ckan customizations for OpenData Trentino Github 1 GSA-ckanext-googleanalyticsbasic Basic ckan extension to add google analytics tracking code in page header Github 1 wardi-ckanext-geocodejob Description is not provided Github 1 ngds-ckanext-metadata-bku03232018 Description is not provided Github 1 cityofsurrey-ckanext-surrey CKAN extension for city of surrey Github 1 CodeForAfrica-ckanext-socialite [EXPERIMENTAL] A CKAN extension to allow login using Google, Facebook, Twitter or Github. Github 1 EUDAT-B2FIND-ckanext-timeline Timeline extension for CKAN Github 1 ViderumGlobal-ckanext-ed Codebase for Dept of Ed Open Data Project Github 1 maulikkamdar-ckanext-feedback This extension provides a simple feedback form for submitting data requests through the CKAN System. Github 1 XVTSolutions-ckanext-extend_search Extends Ckan\u0027s search with additional options Github 1 ngds-ckanext-mapsearch-bku03232018 Description is not provided Github 1 ozwillo-ckanext-ozwillo-theme Ozwillo theme for the CKAN platform Github 1 govro-ckanext-romania_theme Description is not provided Github 1 gfenoy-ckanext-wps CKAN extension for accessing OGC WPS capabilties Github 1 bcgov-ckanext-sso OpenID connect plugin for CKAN used by the B.C. Catalogue. Github 1 okfn-ckanext-sa Custom CKAN extension for data.sa.gov.au Github 1 Helsingin-kaupungin-tietokeskus-ckanext-multiedit Multiedit extension for CKAN Github 1 Cadasta-ckanext-project [DEPRECATED] Implementation of the CKAN prototype for the Cadasta platform Github 1 DEFRA-ckanext-defra CKAN extension for Defra data metadata catalogue Github 1 DataShades-ckanext-acl CKAN extension to manage permissions of individual CKAN users Github 1 qld-gov-au-ckanext-data-qld Queensland Government Open Data extension Github 1 ngds-ckanext-ogcpreview-bku03232018 Description is not provided Github 1 abgov-ckanext-ab_scheming Dataset scheming extension used on open.alberta.ca Github 1 datagovuk-ckanext-dgu-local Support for harvesting from Local Authorities Github 1 okfn-ckanext-sgdata A CKAN extension for the Singapore Ministry of Finance\u0027s metadata catalog. Github 1 zbw-ckanext-edawax CKAN extension for ZBW Journal Data Archive Github 1 open-data-ckanext-history Improved history tab for CKAN Github 1 NaturalHistoryMuseum-ckanext-feedback Feedback extension for CKAN Github 1 DataShades-ckanext-excelimport CKAN extension for creating/updating datasets via a zip file containing an excel metadata template Github 1 milicp-ckanext-semre CKAN extension for RDF description of dataset relationships Github 1 datacats-ckanext-ottawa v2 Github 1 CodeandoMexico-ckanext-openrefine CKAN Extension for adding Open Refine analysis into your dataset resources. Github 1 jonlazaro-ckanext-sparql Description is not provided Github 1 TIBHannover-ckanext-dwgviewer A drawing (AutoCAD) file viewer for ckan Github 1 mmoyles87-ckanext-oauth2provider Allows other applications to login to a ckan instance using OAuth2 Github 1 CSIRO-enviro-informatics-ckanext-user_opt_in Description is not provided Github 1 depositar-ckanext-data-depositario CKAN extension for depositar Github 1 geosolutions-it-ckanext-azure-auth Description is not provided Github 1 dadosgovbr-ckanext-dadosgovbr-2014 Tema para o CKAN utilizado no portal dados.gov.br, na vers\u00e3o implantada em 2014, com CKAN 2.2. Github 1 opendatazurich-ckanext-stadtzh-theme CKAN theme for the City of Zurich Github 1 salzburgerland-ckanext-salzburgerland_tourismus_theme Salzburgerland Tourismus CKAN theme Github 1 dpp-dev-ckanext-latvian-theme Description is not provided Github 1 alabs-ckanext-carchi_theme Theme para el CKAN del GAD del Carchi Github 1 data-govt-nz-ckanext-protected_resources A plugin for CKAN that enables a system administrator to protect dataset resources from accidental deletion Github 1 OpenUpSA-ckanext-discourse-sso Discourse SSO with CKAN as the user authority Github 1 Hoedic-ckanext-recaptcha Correct the bug for the missing recaptcha widget at registration Github 1 opennorth-ckanext-whiterock CKAN extension for City of White Rock Github 1 okfn-ckanext-hideorganizations A CKAN 2 extension that removes CKAN\u0027s organizations feature Github 1 ccca-dc-ckanext-thredds Description is not provided Github 1 datagovuk-ckanext-schemadotorg Description is not provided Github 1 datopian-ckanext-zip Add an option to download resource file in a zip format Github 1 vrk-kpa-ckanext-matomo Description is not provided Github 1 cphsolutionslab-ckanext-cphopendata Theme for cph.opendata.dk Github 1 okfn-ckanext-singapore Description is not provided Github 1 CodeForAfrica-ckanext-followy [ARCHIVED] A CKAN extension to show the datasets a user is following. Github 1 ngds-ckanext-geoserver Description is not provided Github 1 SAERI-Datacenter-ckanext-saerischema CKAN metadata schema for SAERI Github 1 hwaring-ckanext-licenses allows you to add your own licenses Github 1 gzarrub-ckanext-ngsipreview Description is not provided Github 1 okfn-ckanext-recline [Obsolete?] A CKAN preview extension to preview tabular data using recline Github 1 datopian-ckanext-nav CKAN Extension for customization of NAV portal Github 1 etri-odp-ckanext-hdfs HDFS storing extension for CKAN Github 1 GovDataOfficial-ckanext-searchindexhook CKAN extension to synchronize CKAN data with an elasticsearch search index Github 1 okfn-ckanext-hampshire Extension for hampshire Github 1 okfn-ckanext-kenya Description is not provided Github 1 jimmccusker-ckanext-datapub Description is not provided Github 1 Chealer-ckanext-categroupy Plugin to rename CKAN\u0027s dataset groups Github 1 keitaroinc-ckanext-resourcedictionary CKAN extension that extends the default CKAN Data Dictionary functionality by adding the possibility to create a data dictionary before actual data is uploaded to datastore. Github 1 deniszgonjanin-ckanext-geojsonview A simple GeoJSON Resource View for CKAN 2.3+ Github 1 Helsingin-kaupungin-tietokeskus-ckanext-comments A plugin for enabling commenting on CKAN by proxying them to and from WordPress through XML-RPC API. Github 1 ConocimientoAbierto-ckanext-evaluator Description is not provided Github 1 NaturalHistoryMuseum-ckanext-statistics A CKAN extension for accessing download statistics Github 1 okfn-ckanext-webhooks Description is not provided Github 1 kindly-ckanext-spatial Description is not provided Github 1 fumi-ckanext-mimetypes Custom mimetypes extension Github 1 XVTSolutions-ckanext-vdojtheme Description is not provided Github 1 openspending-ckanext-openspending CKAN OpenSpending integration extension Github 1 keitaroinc-ckanext-purge Description is not provided Github 1 data-govt-nz-ckanext-raygun Raygun application monitoring of CKAN Github 1 lightbase-ckanext-datadaemon Ckan based datadaemon that loads an RDF and store it as a resource Github 1 ckan-ckanext-widgets helper widgets to help render atom/rss feeds for CKAN themes Github 1 okfn-ckanext-nsw Description is not provided Github 1 tolletaten-ckanext-tolltheme Description is not provided Github 1 aptivate-ckanext-countrygroup CKAN plugin for grouping datasets into countries. Forked from https://github.com/OCHA-DAP/hdx-ckan Github 1 openresearchdata-ckanext-openbis OpenBis harvester based on ckanext-oaipmh Github 1 XVTSolutions-ckanext-reorder Allows dataset editors to reorder the positioning of resources. Github 1 damalaga-ckanext-federador Federaci\u00f3n de portal CKAN en datos.gob.es Github 1 dadosgovbr-ckanext-dadosgovbrschema Implementation of a schema, using the ckanext-schema extension, for the Brazilian Open Data Portal. Github 1 opendatatrentino-ckanext-sentry Hooks the Sentry\u0027s raven plugin into ckan/pylons wsgi middleware chain. Github 1 datopian-ckanext-meerbusch Description is not provided Github 1 ngds-ckanext-spatial Description is not provided Github 1 georchestra-ckanext-georchestra geOrchestra extension for CKAN Github 1 datopian-ckanext-gdpr CKAN extension for GDPR Github 1 SAERI-Datacenter-ckanext-saeritheme Add a theme to CKAN specifically for SAERI Github 1 ngds-ckanext-ngds Description is not provided Github 1 wardi-ckanext-aiglobal CKAN Theme extension for portal.ai-global.org Github 1 datopian-ckanext-duplicateresource A CKAN extension to copy an existing resource metadata for another resource Github 1 datagovau-ckanext-datajson ckanext-datajson customised for Australian metadata profile Github 1 iotaorg-ckanext-iota CKAN extension for the IOTA Github 1 okfn-ckanext-pakistan Pakistan Data Portal Github 1 PublicaMundi-ckanext-helloworld An helloworld CKAN plugin that demonstrates how to extend metadata schema with a couple of new fields Github 1 okfn-ckanext-queue Async queueing for CKAN. Github 1 Honlan-ckanext-mytheme This is the theming extension for OmniCkan for outlook improvements Github 1 OpenGov-OpenData-ckanext-datasetpermissioning Description is not provided Github 1 derilinx-ckanext-losd Description is not provided Github 1 davidread-ckanext-analytics For analysing CKAN usage Github 1 aptivate-ckanext-locationgroup CKAN plugin for grouping datasets into countries. Forked from https://github.com/aptivate/ckanext-mapactionevent Github 1 ThrawnCA-ckanext-qgov Customisations to the CKAN portal for Queensland Government websites Github 1 NaturalHistoryMuseum-ckanext-video A CKAN extension for embedding Youtube or Vimeo videos as views. Github 1 taijiang-tw-ckanext-taijiang CKAN extension for the Taijiang Research Data Repository Github 1 BioplatformsAustralia-ckanext-bulk Easy bulk access to CKAN datasets, on Windows, MacOS and Linux Github 1 canhdc-ckanext-library Description is not provided Github 1 datopian-ckanext-stirling Theming extension for Stirling city Github 1 geoenvo-ckanext-onedataportal Description is not provided Github 1 cuprit-gbr-ckanext-cuprit Description is not provided Github 1 PublicaMundi-ckanext-interlinking A CKAN extension that allows resource interlinking using recline. Github 1 UoA-eResearch-ckanext-ezid EZID external ID provider for the ckanext-external_id plugin Github 1 vaquer-ckanext-mxtheme Template para el sitio datos.gob.mx Github 1 okfn-ckanext-salford Repo for Salford\u0027s CKAN instance Github 1 dpp-dev-ckanext-datapackager Description is not provided Github 1 6aika-ckanext-collection Description is not provided Github 1 DataShades-ckanext-charts Description is not provided Github 1 metaodi-ckanext-graphql GraphQL for CKAN Github 1 DataSpace-Mobility-ckanext-dataspace Description is not provided Github 1 open-data-ckanext-extendedactivity Extended activity feeds to include items such as membership changes. Github 1 opendatamonitor-ckanext-harvestodm Description is not provided Github 1 friendlycode-ckanext-datagr CKAN extension for data.grcity.us customizations Github 1 okfn-ckanext-aerc AERC demo plugin Github 1 NaturalHistoryMuseum-ckanext-sketchfab A CKAN extension for embedding Sketchfab models as views. Github 1 908Inc-ckanext-apps Description is not provided Github 1 abgov-ckanext-classification Description is not provided Github 1 vulekamali-ckanext-satreasury SA Treasury CKAN theme extension Github 1 fwoerister-ckanext-mongodatastore A datastore backend implementation for CKAN that supports data citation. Github 1 Nithyavasudevan-ckanext-glasgow CKAN Extensions specific to Open Glasgow Github 1 ElixirTeSS-ckanext-tess CKAN extension for TeSS training portal Github 1 ogdch-ckanext-transharvest Harvester for term_translations Github 1 okfn-ckanext-colombia Description is not provided Github 1 DataShades-ckanext-message Description is not provided Github 1 jahow-ckanext-georchestra CKAN integration in geOrchestra Github 1 TIBHannover-ckanext-videoviewer A video Viewer extension for ckan Github 1 TIBHannover-ckanext-semtag Semantic Tags extension for CKAN Github 1 fjelltopp-ckanext-emailasusername CKAN extension allowing users to login and reset passwords with their email as well as their username. Github 1 eradan-ckanext-toscana-harvest Harvester per Regione Toscana Github 1 routetopa-ckanext_rtpa_anomaly_detection ROUTE-TO-PA extension - adds TET functionality to CKAN platform - anomaly detection Github 1 tum-gis-ckanext-relation-sddi Description is not provided Github 1 Quatral-ckanext-contact_us CKAN Extension for a contact us form Github 1 OpenDevelopmentMekong-ckanext-odm_dataset A CKAN extension which provides with template files and logic to implement OD Mekong\u0027s datasets Github 1 eradan-ckanext-toscana-reports Description is not provided Github 1 ckan-ckanext-oauth2waad Login to your CKAN site using Windows Azure Active Directory\u0027s OAuth 2.0 Github 1 knowdive-ckanext-liveschema_theme Description is not provided Github 1 nmarolleau53-ckanext-pigma_theme CKAN theme for the PIGMA project Github 1 datospy-ckanext-datos_theme Tema de ckan para el sitio de datos abiertos (datos.org.py) Github 1 openresearchdata-ckanext-ordbase-theme CKAN base theme for Open Research Data Github 1 avdata99-ckanext-google_drive_import Goole Drive Sheet import as dataset in CKAN Github 1 CivicActions-ckanext-ed-docs Documentation for the Dept of ED CKAN extension Github 1 eawag-rdm-ckanext_eaw_schema Eawag dataset schema. Builds on ckanext-scheming and ckanext-repeating. Github 1 UoA-eResearch-ckanext-external_id Support for external identifiers for datasets Github 1 derilinx-ckanext-dgi-public Source code of data.gov.ie CKAN extension Github 1 EnviDat-ckanext-datacite_publication Extension to mint DOIs and publish CKAN datasets in DataCite Github 1 datopian-ckanext-dcat_ap_no Description is not provided Github 1 DataShades-ckanext-resource_indexer Description is not provided Github 1 OpenDataNode-ckanext-storage-admin Description is not provided Github 1 BetaNYC-ckanext-datacity_theme BetaNYC CKAN theme Github 1 rostock-ckanext-hro_dcatapde A custom implementation of DCAT-AP.de for OpenData.HRO, the open data portal of the municipality of Rostock Github 1 geological-survey-of-queensland-gsq-ckanext-gsq-theme A CKAN extension styling the Geological Survey of Qld\u0027s CKAN instance as per Qld Govt. guidelines Github 1 EnviDat-ckanext-oaipmh_repository Extension for implementing a custom OAI-PMH for CKAN datasets Github 1 ExchangeBC-ckanext-wso2-harvester A WSO2 harvester for CKAN Github 1 XVTSolutions-ckanext-spatialUI Description is not provided Github 1 berlinonline-ckanext-dcatde_berlin Implementation of dcat-ap.de for daten.berlin.de Github 1 opendata-swiss-ckanext-switzerland-ng Description is not provided Github 1 DCOR-dev-ckanext-dcor_theme The DCOR CKAN theme Github 1 rossjones-ckanext-mo-observations Retrieves and stores weather observation data from the Met Office Github 1 SpaceApplications-ckanext-obeos-ldp OBEOS Linked Data Prototype Github 1 salsadigitalauorg-ckanext-invalid-uris Ckan extension to detect invalid URIs Github 1 nextgis-ckanext-fareast_theme CKAN Primorskiy theme Github 1 rostock-ckanext-hro_theme A custom theme for OpenData.HRO, the open data portal of the municipality of Rostock Github 1 ConocimientoAbierto-ckanext-fca_theme Description is not provided Github 1 CSIRO-enviro-informatics-ckanext-dcat-rev Description is not provided Github 1 geological-survey-of-queensland-gsq-ckanext-scheming Custom scheme for GSQ CKAN Github 1 edincubator-ckanext-edi_theme Theme for EDI project\u0027s CKAN Github 1 transparenzportalhamburg-ckanext-distributed-harvester This extension extends the CKAN plugin ckanext-harvest to support distributed harvesting capabilities. Github 1 fumi-ckanext-fake-datagojp ckan extension for datago.jp which is a mirror site of data.go.jp Github 1 keitaroinc-ckanext-mk_dcatap Macedonian DCAT Profile for CKAN Github 1 CSIRO-enviro-informatics-ckanext-csiro_hub_theme Description is not provided Github 1 justicehub-in-ckanext-justicehub_theme CKAN Theme for Justice Hub Github 1 OpenDevelopmentMekong-ckanext-odm_nav Extensions exposing common functionalitities to other ckanext-odm* extensions Github 1 okfn-ckanext-demo-classic CKAN Demo Extension. Github 1 okfn-ckanext-dsmtheme_example An example extension showing how to customize the CKAN frontend Github 1 asc-csa-ckanext-asc-csa-scheming \ud83d\udcc8 Sch\u00e9mas de m\u00e9tadonn\u00e9es pour https://github.com/asc-csa/ckanext-asc-csa | \ud83d\udcc8 Metadata schemas for https://github.com/asc-csa/ckanext-asc-csa Github 1 ```",
+      },
+          'data': {
+          'name': 'Data Collection',
+          'path': 'data',
+          'text': "# Data Collection ## Search packages First of all, we need to find all the ckan extensions on Github. We\u0027re going to look at all the repos having `ckanext` in its name. Github Search API has quite strict querying limits so we have to use different techniques to avoid rate limit errors. As a high-level data collections framework, we will use Frictionless Transform. It will sort the packages by repository\u0027s stargazers count and save it to the CSV file: ```bash $ python code/search.py ``` ```python file code/search.py ```",
+      },
+          'contrib': {
+          'name': 'Contributing',
+          'path': 'contrib',
+          'text': "# Contributing To start working on the project clone the repository and enter its directory: ```bash $ git clone git@github.com:frictionlessdata/ckan-extensions.git $ cd ckan-extensions ``` ## Install Run the following script to initiate a virtual environment and install the dependencies: ```bash $ make install $ editor .env # add your Github Token ``` ## Collect To collect the data use the data collection script (run only if you want to update the data): ```bash $ make collect ``` ## Build To build the project use one of these Livemark commands: ```bash $ livemark start # to build and start a live-reload server $ livemark build # to build in non-interactive mode ``` ## Deploy The project is deployed automatically to Github Pages on every push to \"main\". It means that if one propose a change in a PR it will be deployed automatically after merging.",
+      },
+      };
+  const searchIndex = lunr(function () {
+    this.ref("path")
+    this.field("name", { boost: 10 })
+    this.field("text")
+    for (const item of Object.values(searchItems)) {
+      this.add(item)
+    }
+  });
+  const searchOutput = document.getElementById('livemark-search-output')
+  const searchInput = document.getElementById('livemark-search-input')
+  searchInput.addEventListener('input', search)
+  prepare()
+  search()
+});
+
+</script>
+
+<div id="livemark-search">
+  <div id="livemark-search-output"></div>
+  <input id="livemark-search-input" type="search" placeholder="Search...">
+</div>
+</body>
+</html>
