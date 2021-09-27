@@ -11,8 +11,7 @@
 <div class="item">
   <div class="item-content">
     <h3>
-      <a href="https://github.com/{{ row.user}}/{{row.repo }}" target="_blank">
-        {{ row.repo }}
+      <a href="https://github.com/{{ row.user}}/{{row.repo }}" target="_blank" style="color: black"> {{ row.repo }}
       </a>
     </h3>
     <p>{{ row.description or 'Description is not provided'}}</p>
