@@ -10,7 +10,7 @@
 {% for row in frictionless.extract('data/extensions.csv') %}
 <div class="item">
   <div class="item-content">
-    <h3>{{ row.title or row.code }}</h3>
+    <h3>{{ row.repo }}</h3>
     <p>{{ row.description or 'Description is not provided'}}</p>
     <p>
       <a class="item-content-link" href="https://github.com/{{ row.user}}/{{row.repo }}" target="_blank">
