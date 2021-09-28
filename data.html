@@ -3,7 +3,7 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1">
-<meta name="description" content="First of all, we need to find all the ckan extensions on Github. We're going to look at all the repos having `ckanext` in its name. Github Search API has quite strict querying limits so we have to use different techniques to avoid rate limit errors. As a high-level data collections framework, we will use Frictionless Transform. It will sort the packages by repository's stargazers count and save it to the CSV file:">
+<meta name="description" content="First of all, we need to find all the ckan extensions on Github. We're going to look at all the repos having `ckanext` in its name. Github Search API has quite strict querying limits so we have to use different techniques to avoid rate limit errors:">
 <meta name="keywords" content="data,collection">
 <link rel="icon" href="assets/ckan.png">
 <title>Data Collection | CKAN Extensions</title>
@@ -1828,19 +1828,19 @@ body:not(.with-readability) #livemark-right::-webkit-scrollbar {
 <div id="livemark-main">
 <div id="livemark-notes">
   Written in <a href="https://livemark.frictionlessdata.io" target="_blank"> Livemark </a><br>
-  (2021-09-27 17:39)
+  (2021-09-28 09:37)
 </div>
 
 <h1>Data Collection</h1>
-<h2>Search extensions</h2>
-<p>First of all, we need to find all the ckan extensions on Github. We're going to look at all the repos having <code>ckanext</code> in its name. Github Search API has quite strict querying limits so we have to use different techniques to avoid rate limit errors. As a high-level data collections framework, we will use Frictionless Transform. It will sort the packages by repository's stargazers count and save it to the CSV file:</p>
-<pre><code class="language-bash">$ python code/search.py
+<h2>Extract</h2>
+<p>First of all, we need to find all the ckan extensions on Github. We're going to look at all the repos having <code>ckanext</code> in its name. Github Search API has quite strict querying limits so we have to use different techniques to avoid rate limit errors:</p>
+<pre><code class="language-bash">$ python code/extract.py
 </code></pre>
 <pre><code class="language-python">import os
 import time
 from dotenv import load_dotenv
+from frictionless import Resource
 from github import Github, RateLimitExceededException
-from frictionless import Resource, transform, steps
 
 
 load_dotenv()
@@ -1853,40 +1853,53 @@ github = Github(os.environ["GITHUB_TOKEN"], per_page=100)
 # Source
 
 
-def fetch_source():
-    source = []
-    result = github.search_repositories(QUERY, sort="stars", order="desc")
+def search_items():
+    items = []
+    results = github.search_repositories(QUERY, sort="stars", order="desc")
     time.sleep(PAUSE)
-    page = 0
+    page_number = 0
     while True:
         try:
-            repos = result.get_page(page)
+            page = results.get_page(page_number)
         except RateLimitExceededException:
             time.sleep(RETRY)
             continue
         time.sleep(PAUSE)
-        page += 1
-        if not repos:
+        page_number += 1
+        if not page:
             break
-        for repo in repos:
-            data = {}
-            data["code"] = "-".join([repo.owner.login, repo.name])
-            data["user"] = repo.owner.login
-            data["repo"] = repo.name
-            data["branch"] = repo.default_branch
-            data["stars"] = repo.stargazers_count
-            data["description"] = repo.description
-            source.append(data)
-        print(f"Found items: {len(source)}")
-    return source
+        for result in page:
+            item = {}
+            item["code"] = "-".join([result.owner.login, result.name])
+            item["user"] = result.owner.login
+            item["result"] = result.name
+            item["branch"] = result.default_branch
+            item["stars"] = result.stargazers_count
+            item["description"] = result.description
+            items.append(item)
+        print(f"Found items: {len(items)}")
+    return items
+
+
+# General
+
+
+resource = Resource(search_items())
+resource.write("data/extensions.raw.csv")
+</code></pre><h1>Transform</h1>
+<p>As a high-level data collections framework, we will use Frictionless Transform. It will sort the packages by repository's stargazers count and save it to the CSV file:</p>
+<pre><code class="language-bash">$ python code/transform.py
+</code></pre>
+<pre><code class="language-python">from frictionless import Resource, transform, steps
 
 
 # General
 
 
 transform(
-    Resource(fetch_source()),
+    Resource("data/extensions.raw.csv"),
     steps=[
+        steps.table_normalize(),
         steps.row_sort(field_names=["stars"], reverse=True),
         steps.table_write(path="data/extensions.csv"),
     ],
@@ -2277,12 +2290,12 @@ document.addEventListener("DOMContentLoaded", function () {
           'data': {
           'name': 'Data Collection',
           'path': 'data',
-          'text': "# Data Collection ## Search extensions First of all, we need to find all the ckan extensions on Github. We\u0027re going to look at all the repos having `ckanext` in its name. Github Search API has quite strict querying limits so we have to use different techniques to avoid rate limit errors. As a high-level data collections framework, we will use Frictionless Transform. It will sort the packages by repository\u0027s stargazers count and save it to the CSV file: ```bash $ python code/search.py ``` ```python file code/search.py ```",
+          'text': "# Data Collection ## Extract First of all, we need to find all the ckan extensions on Github. We\u0027re going to look at all the repos having `ckanext` in its name. Github Search API has quite strict querying limits so we have to use different techniques to avoid rate limit errors: ```bash $ python code/extract.py ``` ```python file code/extract.py ``` # Transform As a high-level data collections framework, we will use Frictionless Transform. It will sort the packages by repository\u0027s stargazers count and save it to the CSV file: ```bash $ python code/transform.py ``` ```python file code/transform.py ```",
       },
           'contrib': {
           'name': 'Contributing',
           'path': 'contrib',
-          'text': "# Contributing To start working on the project clone the repository and enter its directory: ```bash $ git clone git@github.com:frictionlessdata/ckan-extensions.git $ cd ckan-extensions ``` ## Install Run the following script to initiate a virtual environment and install the dependencies: ```bash $ make install $ editor .env # add your Github Token ``` ## Collect To collect the data use the data collection script (run only if you want to update the data): ```bash $ make collect ``` ## Build To build the project use one of these Livemark commands: ```bash $ livemark start # to build and start a live-reload server $ livemark build # to build in non-interactive mode ``` ## Deploy The project is deployed automatically to Github Pages on every push to \"main\". It means that if one propose a change in a PR it will be deployed automatically after merging.",
+          'text': "# Contributing To start working on the project clone the repository and enter its directory: ```bash $ git clone git@github.com:frictionlessdata/ckan-extensions.git $ cd ckan-extensions ``` ## Install Run the following script to initiate a virtual environment and install the dependencies: ```bash $ make install $ editor .env # add your Github Token ``` ## Data To collect the data use the data collection script (run only if you want to update the data): ```bash $ make data ``` ## Build To build the project use one of these Livemark commands: ```bash $ livemark start # to build and start a live-reload server $ livemark build # to build in non-interactive mode ``` ## Deploy The project is deployed automatically to Github Pages on every push to \"main\". It means that if one propose a change in a PR it will be deployed automatically after merging.",
       },
       };
   const searchIndex = lunr(function () {

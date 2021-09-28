@@ -1828,7 +1828,7 @@ body:not(.with-readability) #livemark-right::-webkit-scrollbar {
 <div id="livemark-main">
 <div id="livemark-notes">
   Written in <a href="https://livemark.frictionlessdata.io" target="_blank"> Livemark </a><br>
-  (2021-09-27 17:26)
+  (2021-09-28 09:36)
 </div>
 
 <h1>Contributing</h1>
@@ -1841,9 +1841,9 @@ $ cd ckan-extensions
 <pre><code class="language-bash">$ make install
 $ editor .env # add your Github Token
 </code></pre>
-<h2>Collect</h2>
+<h2>Data</h2>
 <p>To collect the data use the data collection script (run only if you want to update the data):</p>
-<pre><code class="language-bash">$ make collect
+<pre><code class="language-bash">$ make data
 </code></pre>
 <h2>Build</h2>
 <p>To build the project use one of these Livemark commands:</p>
@@ -2232,12 +2232,12 @@ document.addEventListener("DOMContentLoaded", function () {
           'data': {
           'name': 'Data Collection',
           'path': 'data',
-          'text': "# Data Collection ## Search extensions First of all, we need to find all the ckan extensions on Github. We\u0027re going to look at all the repos having `ckanext` in its name. Github Search API has quite strict querying limits so we have to use different techniques to avoid rate limit errors. As a high-level data collections framework, we will use Frictionless Transform. It will sort the packages by repository\u0027s stargazers count and save it to the CSV file: ```bash $ python code/search.py ``` ```python file code/search.py ```",
+          'text': "# Data Collection ## Extract First of all, we need to find all the ckan extensions on Github. We\u0027re going to look at all the repos having `ckanext` in its name. Github Search API has quite strict querying limits so we have to use different techniques to avoid rate limit errors: ```bash $ python code/extract.py ``` ```python file code/extract.py ``` # Transform As a high-level data collections framework, we will use Frictionless Transform. It will sort the packages by repository\u0027s stargazers count and save it to the CSV file: ```bash $ python code/transform.py ``` ```python file code/transform.py ```",
       },
           'contrib': {
           'name': 'Contributing',
           'path': 'contrib',
-          'text': "# Contributing To start working on the project clone the repository and enter its directory: ```bash $ git clone git@github.com:frictionlessdata/ckan-extensions.git $ cd ckan-extensions ``` ## Install Run the following script to initiate a virtual environment and install the dependencies: ```bash $ make install $ editor .env # add your Github Token ``` ## Collect To collect the data use the data collection script (run only if you want to update the data): ```bash $ make collect ``` ## Build To build the project use one of these Livemark commands: ```bash $ livemark start # to build and start a live-reload server $ livemark build # to build in non-interactive mode ``` ## Deploy The project is deployed automatically to Github Pages on every push to \"main\". It means that if one propose a change in a PR it will be deployed automatically after merging.",
+          'text': "# Contributing To start working on the project clone the repository and enter its directory: ```bash $ git clone git@github.com:frictionlessdata/ckan-extensions.git $ cd ckan-extensions ``` ## Install Run the following script to initiate a virtual environment and install the dependencies: ```bash $ make install $ editor .env # add your Github Token ``` ## Data To collect the data use the data collection script (run only if you want to update the data): ```bash $ make data ``` ## Build To build the project use one of these Livemark commands: ```bash $ livemark start # to build and start a live-reload server $ livemark build # to build in non-interactive mode ``` ## Deploy The project is deployed automatically to Github Pages on every push to \"main\". It means that if one propose a change in a PR it will be deployed automatically after merging.",
       },
       };
   const searchIndex = lunr(function () {
