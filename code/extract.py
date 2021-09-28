@@ -34,7 +34,7 @@ def search_items():
             item = {}
             item["code"] = "-".join([result.owner.login, result.name])
             item["user"] = result.owner.login
-            item["result"] = result.name
+            item["repo"] = result.name
             item["branch"] = result.default_branch
             item["stars"] = result.stargazers_count
             item["description"] = result.description
